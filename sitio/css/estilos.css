@@ -1,0 +1,1440 @@
+/* ============================================================
+   ALANIS MORISSETTE — DOCUMENTAL DIGITAL
+   Hoja de estilos en CSS puro (sin frameworks).
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1) VARIABLES DE DISEÑO
+   Guardamos los colores y tipos en variables para reutilizarlos.
+   Si cambias un color, cambia en todo el sitio.
+   ------------------------------------------------------------ */
+:root {
+  --ink: #0e0d0c;          /* fondo casi negro (el "escenario") */
+  --paper: #ece7dc;        /* papel cálido, como una revista */
+  --bone: #d8d2c4;         /* tono de papel más suave */
+  --blood: #d6172b;        /* rojo característico de JLP */
+  --ember: #c98a5c;        /* ámbar fotográfico / analógico */
+  --mist: #8c867b;         /* gris cálido para textos secundarios */
+
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+
+  --max: 1400px;           /* ancho máximo del contenido */
+  --pad: clamp(1.25rem, 5vw, 4rem); /* padding lateral fluido */
+}
+
+/* ------------------------------------------------------------
+   2) RESET BÁSICO
+   Se "limpia" el estilo por defecto del navegador para partir
+   de cero y controlarlo todo nosotros.
+   ------------------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;        /* scroll suave para los enlaces # */
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-display);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+::selection {
+  background: var(--blood);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blood);
+  outline-offset: 3px;
+}
+
+/* ------------------------------------------------------------
+   3) UTILIDADES
+   Clases pequeñas que se repiten por todo el sitio.
+   ------------------------------------------------------------ */
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+/* La "overline": etiqueta pequeña, monoespaciada, en mayúsculas */
+.overline {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+/* Ancho de lectura cómodo para párrafos */
+.measure {
+  max-width: 62ch;
+}
+
+/* Título de sección grande */
+.section-title {
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+}
+
+/* Cita en serif itálica con letra elegante */
+.serif-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ------------------------------------------------------------
+   4) REVELADO AL HACER SCROLL
+   Los elementos con .reveal aparecen con una transición cuando
+   entran en pantalla. app.js les agrega la clase .is-visible.
+   Elegante y sin librerías (usamos IntersectionObserver).
+   ------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  /* Cada elemento puede tardar distinto con un pequeño retraso */
+  transition-delay: var(--rd, 0s);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------
+   5) NAVEGACIÓN
+   Barra fija arriba. Cuando haces scroll se le pone fondo.
+   ------------------------------------------------------------ */
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+  background: rgba(14, 13, 12, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px var(--pad);
+}
+
+/* Palabra "Alanis" a la izquierda */
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.brand span:last-child {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--mist);
+}
+
+/* Enlaces de escritorio */
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--mist);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--paper);
+}
+
+/* Botón hamburguesa (móvil) */
+.nav-toggle {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+}
+
+.nav-toggle::before,
+.nav-toggle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 1px;
+  background: var(--paper);
+  transition: transform 0.3s ease;
+}
+
+.nav-toggle::before {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.nav-toggle::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.nav-toggle.open::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.nav-toggle.open::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Menú móvil a pantalla completa */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: var(--ink);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 var(--pad);
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  font-size: clamp(2rem, 9vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* Barra de progreso de scroll (roja, delgada) */
+.nav-progress {
+  display: block;
+  height: 2px;
+  background: var(--blood);
+  width: 0;
+  transform-origin: left;
+}
+
+/* ------------------------------------------------------------
+   6) HERO
+   Imagen a pantalla completa con parallax y texto centrado.
+   ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: -10% 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(1.05);
+  will-change: transform;
+}
+
+/* Degradado para que el texto se lea bien */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, var(--ink) 0%, rgba(14, 13, 12, 0.35) 55%, rgba(14, 13, 12, 0.25) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 13vw, 9rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.82;
+  letter-spacing: -0.02em;
+  margin-top: 20px;
+}
+
+.hero-title span {
+  color: var(--bone);
+}
+
+.hero-sub {
+  margin-top: 28px;
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  color: var(--bone);
+  max-width: 46ch;
+}
+
+.hero-fact {
+  margin-top: 22px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--mist);
+}
+
+/* Animaciones de entrada del hero */
+.hero .anim {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero .anim:nth-child(1) { animation-delay: 0.3s; }
+.hero .anim:nth-child(2) { animation-delay: 0.45s; }
+.hero .anim:nth-child(3) { animation-delay: 0.6s; }
+.hero .anim:nth-child(4) { animation-delay: 0.75s; }
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-credit {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1rem;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(216, 210, 196, 0.6);
+}
+
+/* ------------------------------------------------------------
+   7) TIMELINE / HISTORIA
+   Una columna con el "capítulo" fijo (sticky) y los hitos.
+   ------------------------------------------------------------ */
+.section {
+  padding-block: clamp(5rem, 12vw, 8rem);
+}
+
+.section-pad {
+  padding-top: clamp(5rem, 12vw, 8rem);
+}
+
+.era {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-top: clamp(3rem, 8vw, 6rem);
+}
+
+.era-head {
+  position: relative;
+}
+
+/* Número gigante de fondo */
+.era-number {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.09;
+  pointer-events: none;
+  color: var(--ember);
+}
+
+.era-head h3 {
+  position: relative;
+  padding-top: 4rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.era-head p {
+  margin-top: 1.2rem;
+  color: var(--bone);
+  max-width: 40ch;
+}
+
+.era-items {
+  position: relative;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: clamp(1.4rem, 4vw, 2.5rem);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2.6rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* El puntito de color sobre la línea */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: calc(clamp(1.4rem, 4vw, 2.5rem) * -1);
+  top: 0.4rem;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mist);
+}
+
+.timeline-item .tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-left: 0.9rem;
+}
+
+.timeline-item h4 {
+  margin-top: 0.5rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.timeline-item p {
+  margin-top: 0.7rem;
+  color: var(--bone);
+  max-width: 60ch;
+}
+
+/* Fotografía a lo ancho entre décadas (interludio parallax) */
+.interlude {
+  position: relative;
+  height: 60vh;
+  margin-block: clamp(3rem, 8vw, 5rem);
+  overflow: hidden;
+}
+
+.interlude img {
+  position: absolute;
+  inset: -12% 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.8) contrast(1.04);
+  will-change: transform;
+}
+
+.interlude .cap {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  color: rgba(216, 210, 196, 0.65);
+}
+
+/* ------------------------------------------------------------
+   8) DISCOGRAFÍA (papel)
+   Lista de álbumes a la izquierda, detalle del álbum a la derecha.
+   ------------------------------------------------------------ */
+.bg-paper {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.disco-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+/* Lista de álbumes como "filas" clickeables */
+.album-list {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.album-row {
+  flex: 0 0 auto;
+  min-width: 240px;
+  text-align: left;
+  border-bottom: 1px solid rgba(14, 13, 12, 0.12);
+  padding: 14px 0;
+  transition: border-color 0.2s ease;
+}
+
+.album-row:hover {
+  border-bottom-color: rgba(14, 13, 12, 0.4);
+}
+
+.album-row.active {
+  border-bottom-color: var(--blood);
+}
+
+.album-row .yr {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(14, 13, 12, 0.4);
+}
+
+.album-row.active .yr {
+  color: var(--blood);
+}
+
+.album-row .nm {
+  display: block;
+  font-weight: 800;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-top: 4px;
+}
+
+.album-row .ty {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(14, 13, 12, 0.45);
+  margin-top: 4px;
+}
+
+.album-row .ix {
+  float: right;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: rgba(14, 13, 12, 0.2);
+  margin-top: 6px;
+}
+
+.album-row.active .ix {
+  color: var(--blood);
+}
+
+/* Panel de detalle del álbum */
+.disco-detail {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.disco-detail.fading {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.album-card {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.mini-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 0.95;
+}
+
+.disco-meta label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(14, 13, 12, 0.45);
+  margin-top: 1.2rem;
+}
+
+.disco-meta label + p,
+.disco-meta label + ul {
+  margin-top: 0.3rem;
+}
+
+.disco-meta p,
+.disco-meta li {
+  font-size: 0.95rem;
+  color: rgba(14, 13, 12, 0.8);
+}
+
+.disco-meta ul {
+  list-style: none;
+}
+
+.disco-meta li::before {
+  content: "·";
+  margin-right: 8px;
+  color: var(--blood);
+}
+
+/* Lista de canciones */
+.track-list {
+  list-style: none;
+  margin-top: 0.6rem;
+}
+
+.track-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(14, 13, 12, 0.08);
+  font-size: 0.95rem;
+}
+
+.track-list li .num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(14, 13, 12, 0.35);
+  margin-right: 10px;
+}
+
+.track-list li .dur {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(14, 13, 12, 0.45);
+}
+
+/* Cajas de contexto y recepción */
+.disco-box {
+  border: 1px solid rgba(14, 13, 12, 0.12);
+  border-radius: 3px;
+  padding: 1.2rem;
+}
+
+.disco-box label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(14, 13, 12, 0.45);
+}
+
+.disco-box p {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(14, 13, 12, 0.7);
+}
+
+.disco-note {
+  margin-top: 1.4rem;
+  font-size: 0.82rem;
+  color: rgba(14, 13, 12, 0.5);
+}
+
+/* (Sleeve de álbum decorativo, porque las portadas tienen copyright) */
+.sleeve {
+  position: relative;
+  aspect-ratio: 1;
+  background: var(--ink);
+  background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 3px);
+  color: var(--paper);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sleeve .top,
+.sleeve .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--mist);
+}
+
+.sleeve .top span:first-child { color: var(--blood); }
+
+.sleeve h3 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+.sleeve .line {
+  height: 1px;
+  width: 40px;
+  background: var(--blood);
+  margin-top: 12px;
+}
+
+/* ------------------------------------------------------------
+   9) JAGGED LITTLE PILL
+   Sección con identidad propia: fondo rojo oscuro.
+   ------------------------------------------------------------ */
+.jlp {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(110% 90% at 50% 0%, #2a0d10 0%, #16090a 55%, #0c0708 100%);
+  color: var(--paper);
+  padding-block: clamp(4rem, 10vw, 7rem);
+}
+
+.jlp-title {
+  text-align: center;
+  font-size: clamp(3rem, 13vw, 9rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+}
+
+.jlp-title span { color: var(--blood); }
+
+.jlp-intro {
+  margin: 2rem auto 0;
+  max-width: 40ch;
+  text-align: center;
+  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+  color: var(--bone);
+}
+
+/* Banda de estadísticas */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  margin: 3rem auto 0;
+  max-width: 60rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stat {
+  background: #1a0a0d;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.stat b {
+  display: block;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+}
+
+.stat span {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(216, 210, 196, 0.5);
+}
+
+/* Cinta infinita (marquee) */
+.marquee {
+  overflow: hidden;
+  padding-block: 1.5rem;
+  border-block: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marquee-track span::after {
+  content: "/";
+  color: var(--blood);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.jlp-body {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.jlp-tracks {
+  list-style: none;
+  counter-reset: track;
+}
+
+.jlp-tracks li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.jlp-tracks .t {
+  font-weight: 600;
+  font-size: 1.2rem;
+  counter-increment: track;
+}
+
+.jlp-tracks .t::before {
+  content: counter(track, decimal-leading-zero);
+  color: var(--blood);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin-right: 14px;
+}
+
+.jlp-tracks .d {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(216, 210, 196, 0.4);
+}
+
+.jlp-quote {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.jlp-quote .q {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+.jlp-quote .a {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(216, 210, 196, 0.4);
+}
+
+/* ------------------------------------------------------------
+   10) EN VIVO
+   Imágenes cinematográficas a lo ancho.
+   ------------------------------------------------------------ */
+.feature {
+  position: relative;
+  height: clamp(60vh, 85vh, 58rem);
+  overflow: hidden;
+}
+
+.feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(1.05);
+}
+
+.feature .ovl {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--ink) 0%, rgba(14, 13, 12, 0.15) 55%, transparent 100%);
+}
+
+.feature .cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--pad);
+}
+
+.cine {
+  display: grid;
+  gap: 1.4rem;
+  margin-block: clamp(2.5rem, 7vw, 5rem);
+}
+
+.cine-img {
+  position: relative;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.cine-img img {
+  position: absolute;
+  inset: -10% 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.82) contrast(1.05);
+  will-change: transform;
+}
+
+.cine-img .meta {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(236, 231, 220, 0.85);
+  background: linear-gradient(to top, rgba(14, 13, 12, 0.6), transparent 40%);
+}
+
+.cine-note {
+  align-content: center;
+}
+
+.cine-note .tag {
+  color: var(--blood);
+}
+
+.cine-note p {
+  margin-top: 16px;
+  font-size: clamp(1.4rem, 3.4vw, 2rem);
+  color: var(--bone);
+}
+
+/* ------------------------------------------------------------
+   11) ARGENTINA
+   Fondo cálido atardecer + mapa esquemático + visitas.
+   ------------------------------------------------------------ */
+.arg {
+  background: linear-gradient(180deg, #1a100b 0%, #140d09 45%, #0e0b09 100%);
+  color: var(--paper);
+}
+
+.arg-title {
+  font-size: clamp(3rem, 9vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.85;
+}
+
+.arg-title span { color: var(--ember); }
+
+.arg-grid {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+.map-box {
+  margin-inline: auto;
+  width: min(100%, 22rem);
+  aspect-ratio: 1;
+}
+
+.map-box svg {
+  width: 100%;
+  height: 100%;
+}
+
+.arg-list { display: grid; gap: 1.4rem; }
+
+.arg-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+}
+
+.arg-row .y {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 900;
+  color: var(--ember);
+}
+
+.arg-row h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.arg-row .sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(216, 210, 196, 0.5);
+  margin-top: 4px;
+}
+
+.arg-map-note {
+  font-size: 11px;
+  color: rgba(216, 210, 196, 0.4);
+}
+
+/* Cada visita */
+.visit {
+  display: grid;
+  gap: 1.6rem;
+  margin-top: 2rem;
+}
+
+.visit .y {
+  font-size: clamp(3.5rem, 8vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.visit .tour {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--ember);
+  margin-top: 8px;
+}
+
+.visit-body { border-left: 1px solid rgba(255, 255, 255, 0.1); padding-left: clamp(1.2rem, 4vw, 2.5rem); }
+
+.visit-body h4 { font-size: 1.5rem; font-weight: 800; }
+
+.visit-body .where {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(216, 210, 196, 0.55);
+  margin-top: 6px;
+}
+
+.visit-body .ctx {
+  margin-top: 1rem;
+  color: var(--bone);
+  max-width: 60ch;
+}
+
+.visit-body .rec {
+  margin-top: 0.7rem;
+  color: rgba(216, 210, 196, 0.68);
+  max-width: 60ch;
+}
+
+.setlist {
+  margin-top: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: rgba(236, 231, 220, 0.85);
+}
+
+.setlist b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(216, 210, 196, 0.5);
+  margin-bottom: 6px;
+}
+
+.tofix {
+  margin-top: 1.2rem;
+  border: 1px solid rgba(201, 138, 92, 0.3);
+  background: rgba(201, 138, 92, 0.06);
+  padding: 14px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  color: rgba(216, 210, 196, 0.6);
+}
+
+.tofix b {
+  display: block;
+  color: var(--ember);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 4px;
+}
+
+.srcs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 1.2rem;
+}
+
+.srcs a {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ember);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ------------------------------------------------------------
+   12) ARCHIVO VISUAL
+   Galería editorial con grilla de 12 columnas y tamaños variables.
+   ------------------------------------------------------------ */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2.5rem;
+}
+
+.filters button {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--mist);
+  transition: 0.2s ease;
+}
+
+.filters button:hover { border-color: rgba(255, 255, 255, 0.5); color: var(--paper); }
+
+.filters button.active {
+  background: var(--blood);
+  border-color: var(--blood);
+  color: var(--paper);
+}
+
+.archive-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+
+.arch-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.arch-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(1.04);
+  transition: transform 0.7s ease;
+}
+
+.arch-item:hover img { transform: scale(1.05); }
+
+.arch-item .a-cap {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(14, 13, 12, 0.8), transparent);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: 0.3s ease;
+}
+
+.arch-item:hover .a-cap { opacity: 1; transform: translateY(0); }
+
+.arch-item .a-cap b,
+.arch-item .a-cap span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--paper);
+}
+
+.arch-item .a-cap span {
+  color: var(--mist);
+  margin-top: 5px;
+  font-size: 9px;
+}
+
+/* Tamaños variables de las piezas (solo en escritorio) */
+.g4 { grid-column: span 1; }
+.g5 { grid-column: span 1; }
+.g6 { grid-column: span 1; }
+.g7 { grid-column: span 1; }
+.g8 { grid-column: span 1; }
+.row2 { grid-row: span 2; }
+
+.arch-empty {
+  grid-column: 1 / -1;
+  min-height: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.arch-empty p {
+  margin-top: 12px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--bone);
+}
+
+.arch-empty small {
+  margin-top: 10px;
+  color: rgba(216, 210, 196, 0.5);
+}
+
+/* ------------------------------------------------------------
+   13) FUENTES Y CRÉDITOS
+   ------------------------------------------------------------ */
+.credits-grid {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.cred-col { border-top: 1px solid rgba(14, 13, 12, 0.15); padding-top: 1.4rem; }
+
+.cred-col .h {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(14, 13, 12, 0.5);
+}
+
+.cred-col ul { list-style: none; margin-top: 1.2rem; }
+
+.cred-col li { padding: 4px 0; font-size: 0.9rem; display: flex; align-items: baseline; gap: 8px; color: rgba(14, 13, 12, 0.8); }
+
+.cred-col li .type {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--blood);
+}
+
+.cred-col a { text-decoration: underline; text-underline-offset: 3px; }
+
+.cred-col li span { color: rgba(14, 13, 12, 0.45); }
+
+.cred-note { margin-top: 1rem; font-size: 12px; color: rgba(14, 13, 12, 0.55); }
+
+footer.site {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(14, 13, 12, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+footer.site .brand-big {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+footer.site .small {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(14, 13, 12, 0.45);
+  margin-top: 6px;
+}
+
+footer.site .disclaimer {
+  max-width: 30rem;
+  text-align: right;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: rgba(14, 13, 12, 0.6);
+}
+
+/* ------------------------------------------------------------
+   14) RESPONSIVE
+   A partir de 900px pasamos a las columnas de escritorio.
+   ------------------------------------------------------------ */
+@media (min-width: 900px) {
+  .era { grid-template-columns: 0.42fr 1fr; gap: 4rem; }
+  .era-head { position: sticky; top: 6rem; align-self: start; }
+
+  .album-list { flex-direction: column; overflow: visible; }
+  .album-row { min-width: 0; }
+  .disco-grid { grid-template-columns: 0.9fr 1.1fr; }
+  .disco-detail { position: sticky; top: 6rem; align-self: start; }
+
+  .album-card { grid-template-columns: 0.9fr 1fr; }
+
+  .cine { grid-template-columns: 1.4fr 1fr; gap: 2.5rem; align-items: center; }
+  .cine-img { height: 68vh; }
+  .cine.alt .cine-img { order: 2; }
+  .cine.alt .cine-note { order: 1; }
+
+  .arg-grid { grid-template-columns: 0.8fr 1.2fr; }
+  .visit { grid-template-columns: 170px 1fr; gap: 2.5rem; }
+  .visit .y { position: sticky; top: 6rem; align-self: start; }
+
+  .credits-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .archive-grid { grid-template-columns: repeat(12, 1fr); }
+  .g4 { grid-column: span 4; }
+  .g5 { grid-column: span 5; }
+  .g6 { grid-column: span 6; }
+  .g7 { grid-column: span 7; }
+  .g8 { grid-column: span 8; }
+}
+
+@media (min-width: 1000px) {
+  .nav-links { display: flex; }
+  .nav-toggle { display: none; }
+}
+
+@media (max-width: 1000px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+}
+
+/* Clase para texto SOLO accesible (leído por lectores de pantalla,
+   pero invisible en pantalla) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Cajas de "recepción" y "contexto" de un álbum */
+.disco-boxes {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+/* Anillo que "late" sobre el mapa de Argentina */
+.map-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ring 2.6s ease-out infinite;
+}
+
+@keyframes ring {
+  from { transform: scale(0.4); opacity: 0.7; }
+  to { transform: scale(3); opacity: 0; }
+}
+
+/* Entrada de las fotos del archivo */
+.arch-item { animation: archIn 0.5s ease both; }
+
+@keyframes archIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (min-width: 900px) {
+  .disco-boxes { grid-template-columns: 1fr 1fr; }
+}
+
+/* ------------------------------------------------------------
+   15) MENOS MOVIMIENTO
+   Respetamos a quienes prefieren menos animaciones.
+   ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .hero .anim { opacity: 1; transform: none; animation: none; }
+}
