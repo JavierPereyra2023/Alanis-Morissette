@@ -76,6 +76,27 @@ button {
   outline-offset: 3px;
 }
 
+/* Enlace "Saltar al contenido": invisible hasta que recibe foco de teclado,
+   para que quien navega con Tab pueda saltar la navegación repetitiva. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 14px 20px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
 /* ------------------------------------------------------------
    3) UTILIDADES
    Clases pequeñas que se repiten por todo el sitio.
@@ -193,7 +214,8 @@ button {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--mist);
+  /* Más clara que --mist para mantener contraste AA sobre fondos oscuros */
+  color: #a39c8f;
   transition: color 0.2s ease;
 }
 
@@ -302,6 +324,34 @@ button {
   background: linear-gradient(to top, var(--ink) 0%, rgba(14, 13, 12, 0.35) 55%, rgba(14, 13, 12, 0.25) 100%);
 }
 
+/* Velo de color neón: sigue la luz de escenario real de la foto (azul a la
+   izquierda, rojo a la derecha). mix-blend-mode: screen ilumina en vez de
+   opacar, para que el neón se vea encendido sobre la foto oscura. */
+.hero-neon {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  mix-blend-mode: screen;
+  background: linear-gradient(
+    100deg,
+    rgba(35, 120, 255, 0.4) 0%,
+    rgba(35, 120, 255, 0.14) 32%,
+    rgba(255, 26, 60, 0.14) 66%,
+    rgba(255, 26, 60, 0.4) 100%
+  );
+}
+
+/* Velo fijo arriba: garantiza contraste del nav sin depender del scroll,
+   incluso con el velo neón encendido debajo. */
+.hero-topscrim {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 150px;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(14, 13, 12, 0.78), transparent);
+  pointer-events: none;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -320,10 +370,12 @@ button {
   line-height: 0.82;
   letter-spacing: -0.02em;
   margin-top: 20px;
+  text-shadow: 0 0 46px rgba(35, 120, 255, 0.4);
 }
 
 .hero-title span {
   color: var(--bone);
+  text-shadow: 0 0 46px rgba(255, 26, 60, 0.35);
 }
 
 .hero-sub {
@@ -340,6 +392,51 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.24em;
   color: var(--mist);
+}
+
+/* Cartel que invita a recorrer la sección Argentina / Luna Park 1999.
+   El estado :hover cubre mouse; la clase .is-hover la agrega app.js para
+   que el mismo efecto también responda al foco por teclado. */
+.hero-banner {
+  position: absolute;
+  top: 108px;
+  right: var(--pad);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--paper);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(236, 231, 220, 0.35);
+  transition: border-color 0.25s ease;
+}
+
+.hero-banner:hover,
+.hero-banner.is-hover {
+  border-bottom-color: var(--blood);
+}
+
+.hero-banner svg {
+  flex: none;
+  transition: transform 0.25s ease;
+}
+
+.hero-banner:hover svg,
+.hero-banner.is-hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1000px) {
+  .hero-banner {
+    top: 88px;
+    left: var(--pad);
+    right: var(--pad);
+    font-size: 10px;
+  }
 }
 
 /* Animaciones de entrada del hero */
@@ -570,7 +667,7 @@ button {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(14, 13, 12, 0.45);
+  color: rgba(14, 13, 12, 0.6);
   margin-top: 4px;
 }
 
@@ -614,7 +711,7 @@ button {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(14, 13, 12, 0.45);
+  color: rgba(14, 13, 12, 0.6);
   margin-top: 1.2rem;
 }
 
@@ -664,7 +761,7 @@ button {
 .track-list li .dur {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: rgba(14, 13, 12, 0.45);
+  color: rgba(14, 13, 12, 0.6);
 }
 
 /* Cajas de contexto y recepción */
@@ -679,7 +776,7 @@ button {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(14, 13, 12, 0.45);
+  color: rgba(14, 13, 12, 0.6);
 }
 
 .disco-box p {
@@ -1232,12 +1329,29 @@ button {
   font-size: 9px;
 }
 
-/* Tamaños variables de las piezas (solo en escritorio) */
-.g4 { grid-column: span 1; }
-.g5 { grid-column: span 1; }
-.g6 { grid-column: span 1; }
-.g7 { grid-column: span 1; }
-.g8 { grid-column: span 1; }
+/* Crédito con enlace a la fuente (Wikimedia Commons), cuando existe */
+.arch-item .a-cap a.src-credit {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ember);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Enlace de crédito inline (dentro de una leyenda existente, en interludios
+   de la timeline y momentos "En vivo") */
+.src-credit-inline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Tamaños variables de las piezas (solo en escritorio, ver media query
+   más abajo; en mobile todas ocupan 1 columna por defecto, que es el
+   comportamiento nativo del grid, así que no hace falta declararlo acá). */
 .row2 { grid-row: span 2; }
 
 .arch-empty {
@@ -1297,7 +1411,7 @@ button {
 
 .cred-col a { text-decoration: underline; text-underline-offset: 3px; }
 
-.cred-col li span { color: rgba(14, 13, 12, 0.45); }
+.cred-col li span { color: rgba(14, 13, 12, 0.6); }
 
 .cred-note { margin-top: 1rem; font-size: 12px; color: rgba(14, 13, 12, 0.55); }
 
@@ -1323,7 +1437,7 @@ footer.site .small {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(14, 13, 12, 0.45);
+  color: rgba(14, 13, 12, 0.6);
   margin-top: 6px;
 }
 
@@ -1437,4 +1551,6 @@ footer.site .disclaimer {
   }
   .reveal { opacity: 1; transform: none; }
   .hero .anim { opacity: 1; transform: none; animation: none; }
+  .marquee-track { animation: none; }
+  [data-parallax] { transform: none !important; }
 }

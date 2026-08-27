@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: descomentar y completar con el dominio real de producción
+# Sitemap: https://TU-DOMINIO-DE-PRODUCCION/sitemap.xml

@@ -1,9 +1,9 @@
 /* ============================================================
    ALANIS MORISSETTE — DOCUMENTAL DIGITAL
    Lógica en JavaScript puro (sin frameworks).
-   -> Lee los datos de js/datos.js (variables globales) y pinta
-      el contenido en la página. También agrega las interacciones.
    ============================================================ */
+
+import { argentina, biografia, discografia, media, timeline } from "./datos.js";
 
 /* Pequeñas utilidades para buscar elementos en el documento */
 const $ = (sel) => document.querySelector(sel);
@@ -21,9 +21,30 @@ function esc(texto) {
   }[c]));
 }
 
+/* Enlaces: solo permitimos http(s). Un href como `javascript:...` no contiene
+   ningún carácter que esc() escape, así que necesita su propia validación. */
+function escUrl(u) {
+  const s = String(u || "").trim();
+  const proto = s.slice(0, s.indexOf(":") + 1).toLowerCase();
+  return proto === "http:" || proto === "https:" ? esc(s) : "#";
+}
+
 /* Buscar una foto por su id dentro de `media` */
 function porId(id) {
-  return media.find((m) => m.id === id);
+  const item = media.find((m) => m.id === id);
+  if (!item) {
+    console.warn(`[archivo] No se encontró ninguna foto con id "${id}" en media.`);
+  }
+  return item;
+}
+
+/* Enlace de crédito a la fuente original en Wikimedia Commons, si el dato
+   la trae (campos fileUrl / originUrl que no se usaban en ningún render). */
+function creditoWikimedia(m, claseExtra) {
+  const url = m && (m.originUrl || m.fileUrl);
+  if (!url) return "";
+  const clase = claseExtra ? ` class="${claseExtra}"` : "";
+  return `<a${clase} href="${escUrl(url)}" target="_blank" rel="noopener noreferrer">Fuente: Wikimedia ↗</a>`;
 }
 
 /* Fotos realmente utilizables (no son solo referencia) */
@@ -57,11 +78,23 @@ function iniciarHero() {
   if (fact) $("#heroFact").textContent = fact;
 
   const img = $("#heroImg");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const onScroll = () => {
+    if (reduceMotion.matches) return;
     // La imagen se mueve un poco más lento que el scroll (efecto parallax)
     img.style.transform = "translateY(" + window.scrollY * 0.18 + "px)";
   };
   window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Cartel "Su paso por el Luna Park, 1999": el mismo efecto de hover
+  // responde también al foco por teclado, vía una clase manejada en JS.
+  const banner = $("#heroBanner");
+  if (banner) {
+    const activar = () => banner.classList.add("is-hover");
+    const desactivar = () => banner.classList.remove("is-hover");
+    banner.addEventListener("focus", activar);
+    banner.addEventListener("blur", desactivar);
+  }
 }
 
 /* ============================================================
@@ -87,16 +120,27 @@ function iniciarNav() {
     toggle.classList.remove("open");
     menu.classList.remove("open");
     toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Abrir menú");
+    menu.hidden = true;
   };
 
   toggle.addEventListener("click", () => {
     const abierto = menu.classList.toggle("open");
     toggle.classList.toggle("open", abierto);
     toggle.setAttribute("aria-expanded", String(abierto));
+    toggle.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+    menu.hidden = !abierto;
+    if (abierto) menu.querySelector("a")?.focus();
   });
 
   // Si tocás un enlace del menú, se cierra
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", cerrar));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && menu.classList.contains("open")) {
+      cerrar();
+      toggle.focus();
+    }
+  });
 }
 
 /* ============================================================
@@ -104,6 +148,10 @@ function iniciarNav() {
    (IntersectionObserver, la forma simple de detectar scroll)
    ============================================================ */
 function iniciarReveals() {
+  if (!("IntersectionObserver" in window)) {
+    $$(".reveal").forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
   const observer = new IntersectionObserver(
     (entradas) => {
       entradas.forEach((e) => {
@@ -124,11 +172,14 @@ function iniciarReveals() {
    ============================================================ */
 function iniciarParallax() {
   const imgs = $$("[data-parallax]");
-  let ultimo = 0;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (reduceMotion.matches || !imgs.length) return;
+  let frame = null;
+  let visibles = new Set(imgs);
 
   const pintar = () => {
     const vh = window.innerHeight;
-    imgs.forEach((img) => {
+    visibles.forEach((img) => {
       const fuerza = parseFloat(img.dataset.parallax) || 0.08;
       const r = img.getBoundingClientRect();
       // Qué tan lejos está el centro de la imagen del centro de la pantalla
@@ -137,14 +188,30 @@ function iniciarParallax() {
     });
   };
 
-  const loop = (t) => {
-    if (t - ultimo > 16) {
+  const programar = () => {
+    if (frame !== null) return;
+    frame = requestAnimationFrame(() => {
+      frame = null;
       pintar();
-      ultimo = t;
-    }
-    requestAnimationFrame(loop);
+    });
   };
-  requestAnimationFrame(loop);
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) visibles.add(entrada.target);
+        else visibles.delete(entrada.target);
+      });
+      programar();
+    }, { rootMargin: "100px 0px" });
+    imgs.forEach((img) => observer.observe(img));
+  }
+
+  window.addEventListener("scroll", programar, { passive: true });
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) programar();
+  });
+  programar();
 }
 
 /* ============================================================
@@ -161,10 +228,11 @@ function renderTimeline() {
     if (e > 0) {
       const foto = fotos[idxFoto % fotos.length];
       idxFoto++;
+      const creditoInterludio = creditoWikimedia(foto, "src-credit-inline");
       html += `
         <div class="interlude">
-          <img src="${foto.src}" data-parallax="0.06" alt="${esc(foto.description || foto.title)}" />
-          <span class="cap">Foto: ${esc(foto.credit)} · ${esc(foto.license)}</span>
+          <img src="${esc(foto.src)}" data-parallax="0.06" loading="lazy" decoding="async" alt="${esc(foto.description || foto.title)}" />
+          <span class="cap">Foto: ${esc(foto.credit)} · ${esc(foto.license)}${creditoInterludio ? " · " + creditoInterludio : ""}</span>
         </div>`;
     }
 
@@ -216,9 +284,9 @@ function renderDiscografia() {
         (a, i) => `
         <button class="album-row ${i === activo ? "active" : ""}" data-idx="${i}">
           <span class="ix">${String(i + 1).padStart(2, "0")}</span>
-          <span class="yr">${a.year}</span>
+          <span class="yr">${esc(a.year)}</span>
           <span class="nm">${esc(a.title)}</span>
-          <span class="ty">${ETIQUETA_TIPO[a.type] || a.type}</span>
+          <span class="ty">${esc(ETIQUETA_TIPO[a.type] || a.type)}</span>
         </button>`
       )
       .join("");
@@ -233,9 +301,9 @@ function renderDiscografia() {
       detalle.innerHTML = `
         <div class="album-card">
           <div class="sleeve">
-            <div class="top"><span>${sleeveNum}</span><span>${album.year}</span></div>
+            <div class="top"><span>${esc(sleeveNum)}</span><span>${esc(album.year)}</span></div>
             <div>
-              <span class="overline" style="color:var(--mist)">${ETIQUETA_TIPO[album.type] || album.type}</span>
+              <span class="overline" style="color:var(--mist)">${esc(ETIQUETA_TIPO[album.type] || album.type)}</span>
               <h3>${esc(album.title)}</h3>
               <div class="line"></div>
             </div>
@@ -254,7 +322,7 @@ function renderDiscografia() {
         <div style="margin-top:2rem">
           <label class="overline" style="color:rgba(14,13,12,0.45)">Canciones ${album.tracksVerified ? "" : "(parcial)"}</label>
           <ul class="track-list">
-            ${tracks.map((t, i) => `<li><span><span class="num">${String(i + 1).padStart(2, "0")}</span>${esc(t.title)}</span><span class="dur">${t.duration}</span></li>`).join("")}
+            ${tracks.map((t, i) => `<li><span><span class="num">${String(i + 1).padStart(2, "0")}</span>${esc(t.title)}</span><span class="dur">${esc(t.duration)}</span></li>`).join("")}
           </ul>
         </div>
 
@@ -264,7 +332,7 @@ function renderDiscografia() {
         </div>
 
         <p class="disco-note">
-          ${album.officialLinks.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noreferrer" style="color:var(--blood);text-decoration:underline;text-underline-offset:4px;margin-right:16px">${esc(l.label)} ↗</a>`).join("")}
+          ${album.officialLinks.map((l) => `<a href="${escUrl(l.url)}" target="_blank" rel="noopener noreferrer" style="color:var(--blood);text-decoration:underline;text-underline-offset:4px;margin-right:16px">${esc(l.label)} ↗</a>`).join("")}
           ${album.coverRef && album.coverRef.note ? `<span>Portada no incluida (copyright). Escuchá en tu plataforma preferida.</span>` : ""}
         </p>`;
 
@@ -312,9 +380,8 @@ function renderJlp() {
     .map((s) => `<div class="stat"><b>${s.v}</b><span>${s.l}</span></div>`)
     .join("");
 
-  $("#marquee").innerHTML = album.tracks
-    .map((t) => `<span>${esc(t.title)}</span>`)
-    .join("");
+  const marqueeTracks = album.tracks.map((t) => `<span>${esc(t.title)}</span>`).join("");
+  $("#marquee").innerHTML = marqueeTracks + marqueeTracks;
 
   $("#jlpContext").innerHTML = `
       <div>
@@ -343,9 +410,19 @@ function renderJlp() {
 function renderEnVivo() {
   // Imagen destacada
   const destacada = porId("alanis-2014-saban-rally");
-  $("#featureImg").src = destacada.src;
-  $("#featureTitle").textContent = destacada.title;
-  $("#featureCredit").textContent = "Foto: " + destacada.credit + " · " + destacada.license;
+  const featureSection = $("#featureSection");
+
+  if (destacada) {
+    if (featureSection) featureSection.hidden = false;
+    $("#featureImg").src = destacada.src;
+    $("#featureImg").alt = destacada.description || destacada.title || "";
+    $("#featureTitle").textContent = destacada.title;
+    $("#featureCredit").textContent = "Foto: " + destacada.credit + " · " + destacada.license;
+  } else {
+    // No hay dato para la imagen destacada: ocultamos la sección en vez de
+    // dejar un <img> roto sin src.
+    if (featureSection) featureSection.hidden = true;
+  }
 
   // Momentos: foto grande + texto al lado (alternando el orden)
   const momentos = [
@@ -358,19 +435,23 @@ function renderEnVivo() {
 
   $("#liveMoments").innerHTML = momentos
     .map((m, i) => {
+      // Si no hay foto propia ni destacada de respaldo, no renderizamos
+      // este momento (mejor omitirlo que dejar una imagen rota).
       const foto = porId(m.id) || destacada;
+      if (!foto) return "";
       const alt = i % 2 === 1 ? "alt" : "";
+      const credito = creditoWikimedia(foto, "src-credit-inline");
       return `
       <div class="cine ${alt}">
         <div class="cine-img">
-          <img src="${foto.src}" data-parallax="0.06" alt="${esc(foto.description || foto.title)}" />
+          <img src="${esc(foto.src)}" data-parallax="0.06" loading="lazy" decoding="async" alt="${esc(foto.description || foto.title)}" />
           <div class="meta">
-            <span>${m.tag} · ${foto.license}</span>
-            <span style="align-self:flex-end">Foto: ${esc(foto.credit)}</span>
+            <span>${esc(m.tag)} · ${esc(foto.license)}</span>
+            <span style="align-self:flex-end">Foto: ${esc(foto.credit)}${credito ? " · " + credito : ""}</span>
           </div>
         </div>
         <div class="cine-note">
-          <p class="overline tag" style="color:var(--blood)">${m.tag}</p>
+          <p class="overline tag" style="color:var(--blood)">${esc(m.tag)}</p>
           <p class="serif-quote">${esc(m.note)}</p>
         </div>
       </div>`;
@@ -388,7 +469,7 @@ function renderArgentina() {
     .map(
       (v) => `
       <div class="arg-row">
-        <span class="y">${v.year}</span>
+        <span class="y">${esc(v.year)}</span>
         <div>
           <h4>${esc(v.venue)}</h4>
           <p class="sub">${esc(v.city)} · ${esc(v.tour)}</p>
@@ -405,7 +486,7 @@ function renderArgentina() {
       (v) => `
       <article class="visit">
         <div class="reveal">
-          <span class="y">${v.year}</span>
+          <span class="y">${esc(v.year)}</span>
           <p class="tour">${esc(v.tour)}</p>
         </div>
 
@@ -415,12 +496,13 @@ function renderArgentina() {
           <p class="ctx">${esc(v.context)}</p>
           <p class="rec">${esc(v.reception)}</p>
 
-          ${v.setlistVerified && v.setlist.length ? `<p class="setlist"><b>Setlist destacado</b>${esc(v.setlist.slice(0, 9).join(" · "))}</p>` : ""}
+          ${v.confirmedSongs?.length ? `<p class="setlist"><b>Canciones confirmadas por la crónica</b>${esc(v.confirmedSongs.join(" · "))}</p>` : ""}
+          ${v.setlistVerified && v.setlist.length ? `<p class="setlist"><b>Setlist completo</b>${esc(v.setlist.slice(0, 9).join(" · "))}</p>` : ""}
 
           ${v.contradictions ? `<div class="tofix"><b>A revisar</b>${esc(v.contradictions)}</div>` : ""}
 
           <div class="srcs">
-            ${v.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.type)} ↗</a>`).join("")}
+            ${v.sources.map((s) => `<a href="${escUrl(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.type)} ↗</a>`).join("")}
           </div>
         </div>
       </article>`
@@ -437,25 +519,39 @@ const LISTAS_ARCHIVO = {
   Tours: ["alanis-2022-live-raph", "alanis-2022-live-raph-2", "alanis-2014-saban-rally", "alanis-2003-brasilia", "alanis-2004-locarno"],
   Awards: ["alanis-walk-of-fame-star", "alanis-rock-walk-of-fame", "alanis-signing-autographs"],
   Studio: [],
-  Argentina: [],
+  Argentina: ["luna-park-1999-11-23"],
 };
 
 // Tamaños (spans) que adoptan las piezas en la grilla de 12 columnas
 const TAMANOS = ["g7 row2", "g5", "g4", "g8 row2", "g4", "g6", "g6", "g5"];
 
+/* Resuelve los ids de una categoría a fotos usables reales */
+function fotosDeCategoria(categoria) {
+  const ids = LISTAS_ARCHIVO[categoria] || [];
+  return ids.map(porId).filter(Boolean).filter((m) => !m.referencesOnly);
+}
+
+/* Categorías que hoy tienen al menos una imagen: las únicas que mostramos
+   como botón de filtro (evita opciones "muertas" tipo Studio/Argentina
+   que siempre resultarían en "no hay imágenes"). */
+function categoriasConContenido() {
+  return Object.keys(LISTAS_ARCHIVO).filter((cat) => fotosDeCategoria(cat).length > 0);
+}
+
 function renderArchivo(categoria) {
   const raiz = $("#archiveGrid");
+  const status = $("#archiveStatus");
   let items;
 
   if (categoria === "Todos") {
     items = fotosUsables();
   } else {
-    const ids = LISTAS_ARCHIVO[categoria] || [];
-    items = ids.map(porId).filter(Boolean).filter((m) => !m.referencesOnly);
+    items = fotosDeCategoria(categoria);
   }
 
   // Si la categoría no tiene imágenes, mostramos una explicación
   if (!items.length) {
+    status.textContent = `No hay imágenes disponibles para ${categoria}.`;
     raiz.innerHTML = `
       <div class="arch-empty">
         <p class="overline" style="color:var(--ember)">${esc(categoria)}</p>
@@ -465,25 +561,40 @@ function renderArchivo(categoria) {
     return;
   }
 
+  status.textContent = `${items.length} imágenes en la categoría ${categoria}.`;
+
   raiz.innerHTML = items
     .map((m, i) => {
       const clase = TAMANOS[i % TAMANOS.length];
+      const credito = creditoWikimedia(m, "src-credit");
       return `
       <figure class="arch-item ${clase}">
-        <img src="${m.src}" alt="${esc(m.description || m.title)}" />
-        <figcaption class="a-cap"><b>${esc(m.title)}</b><span>${esc(m.credit)} · ${esc(m.license)}</span></figcaption>
+        <img src="${esc(m.src)}" loading="lazy" decoding="async" alt="${esc(m.description || m.title)}" />
+        <figcaption class="a-cap"><b>${esc(m.title)}</b><span>${esc(m.credit)} · ${esc(m.license)}</span>${credito}</figcaption>
       </figure>`;
     })
     .join("");
 }
 
 function iniciarArchivo() {
+  // Arma los botones de filtro dinámicamente: "Todos" siempre, y una
+  // categoría solo si hoy tiene imágenes cargadas.
+  const filtros = $("#filters");
+  const categorias = categoriasConContenido();
+  filtros.innerHTML =
+    `<button class="active" data-cat="Todos" aria-pressed="true">Todos</button>` +
+    categorias.map((cat) => `<button data-cat="${esc(cat)}" aria-pressed="false">${esc(cat)}</button>`).join("");
+
   renderArchivo("Todos");
-  $("#filters").addEventListener("click", (e) => {
+  filtros.addEventListener("click", (e) => {
     const btn = e.target.closest("button");
     if (!btn) return;
-    $$("#filters button").forEach((b) => b.classList.remove("active"));
+    $$("#filters button").forEach((b) => {
+      b.classList.remove("active");
+      b.setAttribute("aria-pressed", "false");
+    });
     btn.classList.add("active");
+    btn.setAttribute("aria-pressed", "true");
     renderArchivo(btn.dataset.cat);
   });
 }
@@ -498,10 +609,10 @@ function renderCredits() {
   const albumFuentes = Array.from(new Set(discografia.map((a) => a.source).filter(Boolean)));
 
   const listaFuentes = (arr) =>
-    `<ul>${arr.map((s) => `<li><span class="type">${esc(s.type || "src")}</span><a href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.title)} ↗</a></li>`).join("")}</ul>`;
+    `<ul>${arr.map((s) => `<li><span class="type">${esc(s.type || "src")}</span><a href="${escUrl(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a></li>`).join("")}</ul>`;
 
   const listaAlbumes = (arr) =>
-    `<ul>${arr.map((u) => `<li><span class="type">album</span><a href="${esc(u)}" target="_blank" rel="noreferrer">${esc(u)} ↗</a></li>`).join("")}</ul>`;
+    `<ul>${arr.map((u) => `<li><span class="type">album</span><a href="${escUrl(u)}" target="_blank" rel="noopener noreferrer">${esc(u)} ↗</a></li>`).join("")}</ul>`;
 
   // Fotos utilizables, con su licencia y crédito
   const fotos = fotosUsables();

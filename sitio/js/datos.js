@@ -3,140 +3,140 @@
  * Las variables globales de aqui se usan en js/app.js.
  */
 
-const biografia = {
-  "overview": "Alanis Nadine Morissette (born June 1, 1974, in Ottawa, Ontario, Canada) is a Canadian-American singer, songwriter, and record producer celebrated for her confessional, emotionally unflinching lyrics and a layered alternative-rock sound. She first emerged as a teen dance-pop artist in Canada in the early 1990s, releasing two locally successful albums before relocating to Los Angeles. There she partnered with producer-songwriter Glen Ballard, and together they wrote and recorded \"Jagged Little Pill\" (1995), which became one of the best-selling albums of all time and made Morissette one of the defining voices of 1990s alternative rock.\n\n\"Jagged Little Pill\" broke her into the mainstream with the searing single \"You Oughta Know\" and turned raw, autobiographical rage — and later vulnerability — into globally resonant pop-rock. The record earned her four Grammy Awards in a single night (Album of the Year, Best Rock Album, Best Rock Song and Best Female Rock Vocal Performance for \"You Oughta Know\") and helped normalize frank female expression in rock. Over three decades she has continued to evolve, moving from the Eastern-tinged, spiritually searching \"Supposed Former Infatuation Junkie\" (1998) through self-produced and later more ambient, meditative work in the 2020s.\n\nHer cultural impact extends well beyond sales. Morissette opened a lane for later confessional singer-songwriters and has been cited as an influence by artists including Avril Lavigne, Pink, Katy Perry, and Olivia Rodrigo. She has pivoted to activism and wellness advocacy — speaking publicly about eating disorders, postpartum depression, mental health, and later menopause — and hosts a long-running interview podcast, \"Conversation with Alanis Morissette.\" Her 1995 album was adapted into a Broadway musical that earned 15 Tony nominations and two wins plus a Grammy for Best Musical Theater Album. She is a member of the Canadian Music Hall of Fame (2015) and the Canadian Songwriters Hall of Fame (2022).",
+export const biografia = {
+  "overview": "Alanis Nadine Morissette (nacida el 1 de junio de 1974 en Ottawa, Ontario, Canadá) es una cantante, compositora y productora discográfica canadiense-estadounidense, célebre por sus letras confesionales y emocionalmente descarnadas y por un sonido de rock alternativo lleno de capas. Surgió primero como artista de dance-pop adolescente en Canadá a principios de los años 90, con dos álbumes de éxito local antes de mudarse a Los Ángeles. Allí se asoció con el productor y compositor Glen Ballard, y juntos escribieron y grabaron \"Jagged Little Pill\" (1995), que se convirtió en uno de los álbumes más vendidos de todos los tiempos e hizo de Morissette una de las voces definitorias del rock alternativo de los años 90.\n\n\"Jagged Little Pill\" la llevó al gran público con el mordaz sencillo \"You Oughta Know\" y transformó la ira autobiográfica y descarnada —y más tarde la vulnerabilidad— en un pop-rock de resonancia mundial. El disco le valió cuatro premios Grammy en una sola noche (Álbum del Año, Mejor Álbum de Rock, Mejor Canción de Rock y Mejor Interpretación Vocal de Rock Femenina por \"You Oughta Know\") y ayudó a normalizar la expresión femenina franca dentro del rock. A lo largo de tres décadas siguió evolucionando, desde el tono espiritual y con matices orientales de \"Supposed Former Infatuation Junkie\" (1998) hasta un trabajo autoproducido y, más tarde, un sonido más ambiental y meditativo en la década de 2020.\n\nSu impacto cultural va mucho más allá de las ventas. Morissette abrió un camino para las cantautoras confesionales que vinieron después y ha sido citada como influencia por artistas como Avril Lavigne, Pink, Katy Perry y Olivia Rodrigo. Se volcó también al activismo y la promoción del bienestar —hablando públicamente sobre trastornos alimentarios, depresión posparto, salud mental y, más adelante, la menopausia— y conduce desde hace años un podcast de entrevistas, \"Conversation with Alanis Morissette\". Su álbum de 1995 fue adaptado a un musical de Broadway que obtuvo 15 nominaciones al Tony, dos premios y un Grammy al Mejor Álbum de Teatro Musical. Es miembro del Salón de la Fama de la Música Canadiense (2015) y del Salón de la Fama de los Compositores Canadienses (2022).",
   "quickFacts": [
-    "Born June 1, 1974, in Ottawa, Ontario, Canada (twin brother Wade Morissette is 12 minutes older; older brother Chad).",
-    "Full name: Alanis Nadine Morissette. Father of French and Irish descent; mother of Hungarian descent.",
-    "Became a United States citizen in 2005 (dual Canadian-American).",
-    "Signed to Madonna's Maverick Records for her international debut.",
-    "\"Jagged Little Pill\" (1995) has sold more than 33 million copies worldwide — one of the best-selling albums of all time.",
-    "\"Jagged Little Pill\" made her the first Canadian female artist to reach No. 1 on the U.S. Billboard 200 and the first Canadian artist certified double-diamond in Canada.",
-    "Seven Grammy Awards from 14 nominations (per GRAMMY.com).",
-    "Two Golden Globe Award nominations; one BRIT Award; three MTV Video Music Awards; two American Music Awards.",
-    "Fifteen Juno Awards from 26 nominations (per the official JUNO Awards site); her first Juno came when she was 17.",
-    "Inducted into the Canadian Music Hall of Fame in 2015 and the Canadian Songwriters Hall of Fame in 2022.",
-    "Total worldwide album sales commonly cited between 60 and 75 million records (sources vary).",
-    "Married rapper/hip-hop artist Mario \"Souleye\" Treadway on May 22, 2010; they have three children.",
-    "Hosts the podcast \"Conversation with Alanis Morissette\" and hosts wellness/spirituality conversations.",
-    "Was previously engaged to actor Ryan Reynolds."
+    "Nació el 1 de junio de 1974 en Ottawa, Ontario, Canadá (su hermano gemelo Wade Morissette es 12 minutos mayor; también tiene un hermano mayor, Chad).",
+    "Nombre completo: Alanis Nadine Morissette. Padre de ascendencia francesa e irlandesa; madre de ascendencia húngara.",
+    "Se convirtió en ciudadana estadounidense en 2005 (doble nacionalidad canadiense-estadounidense).",
+    "Firmó con Maverick Records, el sello de Madonna, para su debut internacional.",
+    "\"Jagged Little Pill\" (1995) vendió más de 33 millones de copias en todo el mundo, uno de los álbumes más vendidos de la historia.",
+    "\"Jagged Little Pill\" la convirtió en la primera artista canadiense en alcanzar el número 1 del Billboard 200 estadounidense y en la primera artista canadiense certificada doble diamante en Canadá.",
+    "Siete premios Grammy sobre 14 nominaciones (según GRAMMY.com).",
+    "Dos nominaciones al Globo de Oro; un premio BRIT; tres MTV Video Music Awards; dos American Music Awards.",
+    "Quince premios Juno sobre 26 nominaciones (según el sitio oficial de los Juno Awards); ganó su primer Juno a los 17 años.",
+    "Ingresó al Salón de la Fama de la Música Canadiense en 2015 y al Salón de la Fama de los Compositores Canadienses en 2022.",
+    "Las ventas totales de álbumes en el mundo suelen citarse entre 60 y 75 millones de copias (las fuentes varían).",
+    "Se casó con el rapero Mario \"Souleye\" Treadway el 22 de mayo de 2010; tienen tres hijos.",
+    "Conduce el podcast \"Conversation with Alanis Morissette\" y modera conversaciones sobre bienestar y espiritualidad.",
+    "Estuvo comprometida anteriormente con el actor Ryan Reynolds."
   ],
-  "earlyLife": "Alanis Nadine Morissette was born on June 1, 1974, at Riverside Hospital in Ottawa, Ontario, Canada, to Alan Richard Morissette (a teacher of French and Irish descent) and Georgia Mary Ann (née Feuerstein) Morissette (a Hungarian immigrant). She is a twin: her brother Wade was born 12 minutes earlier, and they have an older brother, Chad. Because both parents worked as teachers at a military-base school, the family relocated to Lahr, Germany, from 1977 to 1980 before returning to Ottawa. She studied piano at six and began composing at seven, writing her first song at nine; at around ten she also took dance lessons. She appeared as a child on the Nickelodeon series \"You Can't Do That on Television\" and used her earnings to record her first single. She attended Holy Family Catholic School, then Immaculata High School, and graduated from Glebe Collegiate Institute. By age 14 she had a song-publishing deal.",
-  "debut": "Before she was a global rock star, Morissette was a teen dance-pop act in Canada. Her 1987 indie electro-pop single \"Fate Stay With Me\" was her first recording as a teen, and her self-titled debut album, \"Alanis\" (1991, on MCA Records Canada), went platinum in Canada on the strength of singles including \"Too Hot,\" \"Walk Away,\" and \"Feel Your Love.\" The polished, dance-oriented sound led the Canadian press to nickname her the \"Debbie Gibson of Canada.\" She won her first Juno Award — Most Promising Female Vocalist — for \"Too Hot.\" Her follow-up, \"Now Is the Time\" (1992), was a more ballad-driven record that produced three Canadian top-40 singles (\"An Emotion Away,\" \"No Apologies,\" and \"(Change Is) Never a Waste of Time\") and was certified gold in Canada, but neither album broke her internationally.",
-  "transition": "Believing her teen-pop identity was limiting, Morissette moved to Toronto and then to Los Angeles in the mid-1990s, determined to reinvent herself artistically. She was introduced to Glen Ballard, an accomplished producer and songwriter who had worked with Michael Jackson, Paula Abdul, and Wilson Phillips. The two clicked immediately, and instead of chasing radio hits they let Morissette's journal entries and raw emotions guide the writing. Meeting at Ballard's home studio, they co-wrote and recorded songs quickly and intuitively, often capturing first-take vocals. The result was a complete departure from her dance-pop past: a visceral alternative-rock record bearing anger, vulnerability, and confession. After signing to Madonna's Maverick Records, she emerged with a sound and persona that would define her career.",
-  "jaggedLittlePill": "\"Jagged Little Pill\" was released on June 13, 1995, through Maverick/Reprise. Co-written and produced by Glen Ballard and recorded at Westlake Recording Studios and Signet Sound in Hollywood, it was her first album released worldwide. The lead single, \"You Oughta Know\" (released July 6, 1995), was an instant statement — a biting, furious rock track whose anger and intensity were unprecedented on mainstream radio. Featuring Flea on bass, Dave Navarro on guitar, Benmont Tench on organ, and Matt Laug on drums, the song was played relentlessly by Los Angeles modern-rock station KROQ and helped the album snowball from a modest release into a global phenomenon.\n\nBuoyed by follow-up singles \"Hand in My Pocket,\" \"Ironic,\" \"You Learn,\" \"Head over Feet,\" and \"All I Really Want,\" the album spent months climbing charts, ultimately topping the Billboard 200 and hitting No. 1 in a dozen-plus countries. In the U.S. it sold over 16 million copies (certified 17× Platinum) and remains one of the only albums to surpass 15 million U.S. copies since SoundScan tracking began; in Canada it was certified double-diamond, a first for a Canadian artist. It was the best-selling album worldwide of 1996, with roughly 18.7 million copies sold that year alone, and has since surpassed 33 million copies globally.\n\nThe record's cultural significance is enduring. At the 1996 Grammy Awards, a 21-year-old Morissette won four trophies — Album of the Year, Best Rock Album, Best Rock Song, and Best Female Rock Vocal Performance (the latter two for \"You Oughta Know\") — and remains among the youngest artists to win Album of the Year. The album reframed what female artists could say in mainstream rock, making raw, unvarnished female anger — and, just as powerfully, vulnerability and hope — commercially viable. It has appeared on Rolling Stone's list of the 500 Greatest Albums of All Time and was adapted into a Broadway musical, \"Jagged Little Pill,\" whose original cast recording won a Grammy for Best Musical Theater Album.",
-  "evolution": "Morissette's follow-up, \"Supposed Former Infatuation Junkie\" (November 3, 1998), broke the record for first-week album sales by a female artist and debuted at No. 1 on the Billboard 200. Its lead single, \"Thank U,\" plus the Grammy-winning \"Uninvited\" (from the 1998 film \"City of Angels\"), signaled a more spiritual and introspective direction; she directed most of the album's videos. \"MTV Unplugged\" (1999) followed.\n\nWith \"Under Rug Swept\" (February 26, 2002), Morissette self-produced and wrote the entire album, which debuted at No. 1 in 12 countries and produced the hit \"Hands Clean.\" \"So-Called Chaos\" (2004) saw her work with producer John Shanks; the rarities compilations and \"Jagged Little Pill Acoustic\" arrived in 2005. \"Flavors of Entanglement\" (June 10, 2008), produced largely by Guy Sigsworth, leaned into electronic and ambient textures and yielded a Juno for Pop Album of the Year.\n\n\"Havoc and Bright Lights\" (August 28, 2012) marked a shift to warmer, more pop-oriented and spiritual songwriting after she became a mother. After an extended break, \"Such Pretty Forks in the Road\" (July 31, 2020, delayed from May by the pandemic) returned to confessional, emotionally direct songwriting addressing mental health, addiction, and the pressures on women. She then pivoted to ambient/meditation music with \"The Storm Before the Calm\" (June 17, 2022), co-written with Darkside's Dave Harrington and released on the Calm meditation app. In parallel, her catalog was recontextualized by the \"Jagged Little Pill\" musical, which premiered at the American Repertory Theater in 2018 and opened on Broadway in December 2019.",
+  "earlyLife": "Alanis Nadine Morissette nació el 1 de junio de 1974 en el Riverside Hospital de Ottawa, Ontario, Canadá, hija de Alan Richard Morissette (docente de ascendencia francesa e irlandesa) y de Georgia Mary Ann Morissette (de soltera Feuerstein, inmigrante húngara). Es gemela: su hermano Wade nació 12 minutos antes, y también tienen un hermano mayor, Chad. Como ambos padres trabajaban como maestros en una escuela de una base militar, la familia se mudó a Lahr, Alemania, entre 1977 y 1980, antes de volver a Ottawa. Estudió piano a los seis años y empezó a componer a los siete, escribiendo su primera canción a los nueve; alrededor de los diez también tomó clases de danza. De niña apareció en la serie de Nickelodeon \"You Can't Do That on Television\" y usó lo que ganó para grabar su primer sencillo. Asistió a la Holy Family Catholic School, luego a la Immaculata High School, y se graduó en el Glebe Collegiate Institute. A los 14 años ya tenía un contrato editorial de canciones.",
+  "debut": "Antes de ser una estrella de rock global, Morissette fue una artista adolescente de dance-pop en Canadá. Su sencillo electro-pop independiente de 1987, \"Fate Stay With Me\", fue su primera grabación en la adolescencia, y su álbum debut homónimo, \"Alanis\" (1991, en MCA Records Canada), llegó a platino en Canadá gracias a sencillos como \"Too Hot\", \"Walk Away\" y \"Feel Your Love\". Ese sonido pulido y orientado a la pista de baile llevó a la prensa canadiense a apodarla la \"Debbie Gibson de Canadá\". Ganó su primer premio Juno —Vocalista Femenina Más Prometedora— por \"Too Hot\". Su siguiente disco, \"Now Is the Time\" (1992), fue un álbum más orientado a las baladas que produjo tres sencillos entre los primeros 40 de Canadá (\"An Emotion Away\", \"No Apologies\" y \"(Change Is) Never a Waste of Time\") y fue certificado oro en Canadá, pero ninguno de los dos discos la proyectó internacionalmente.",
+  "transition": "Convencida de que su identidad de teen-pop la limitaba, Morissette se mudó a Toronto y luego a Los Ángeles a mediados de los años 90, decidida a reinventarse artísticamente. Allí la presentaron a Glen Ballard, un consagrado productor y compositor que había trabajado con Michael Jackson, Paula Abdul y Wilson Phillips. Los dos conectaron de inmediato y, en lugar de perseguir éxitos radiales, dejaron que las entradas de diario y las emociones sin filtrar de Morissette guiaran la escritura. Reunidos en el estudio casero de Ballard, coescribieron y grabaron canciones con rapidez e intuición, capturando muchas veces la voz en la primera toma. El resultado fue un quiebre total con su pasado dance-pop: un disco de rock alternativo visceral, cargado de ira, vulnerabilidad y confesión. Tras firmar con Maverick Records, el sello de Madonna, surgió con un sonido y una identidad artística que definirían su carrera.",
+  "jaggedLittlePill": "\"Jagged Little Pill\" salió a la venta el 13 de junio de 1995 a través de Maverick/Reprise. Coescrito y producido por Glen Ballard y grabado en los estudios Westlake Recording y Signet Sound de Hollywood, fue su primer álbum de lanzamiento mundial. El sencillo principal, \"You Oughta Know\" (editado el 6 de julio de 1995), fue una declaración inmediata: un tema de rock mordaz y furioso cuya ira e intensidad no tenían precedentes en la radio masiva. Con Flea en el bajo, Dave Navarro en la guitarra, Benmont Tench en el órgano y Matt Laug en la batería, la canción sonó sin parar en KROQ, la emblemática radio de rock moderno de Los Ángeles, y ayudó a que el álbum pasara de un lanzamiento modesto a un fenómeno mundial.\n\nImpulsado por los sencillos posteriores \"Hand in My Pocket\", \"Ironic\", \"You Learn\", \"Head over Feet\" y \"All I Really Want\", el álbum pasó meses escalando las listas hasta llegar a la cima del Billboard 200 y al número 1 en más de una docena de países. En Estados Unidos vendió más de 16 millones de copias (certificado 17 veces Platino) y sigue siendo uno de los pocos álbumes en superar los 15 millones de copias en ese país desde que existe el sistema de conteo SoundScan; en Canadá fue certificado doble diamante, una primicia para un artista canadiense. Fue el álbum más vendido del mundo en 1996, con cerca de 18,7 millones de copias solo ese año, y desde entonces superó los 33 millones de copias a nivel global.\n\nLa trascendencia cultural del disco perdura. En los premios Grammy de 1996, una Morissette de 21 años se llevó cuatro estatuillas —Álbum del Año, Mejor Álbum de Rock, Mejor Canción de Rock y Mejor Interpretación Vocal de Rock Femenina (estas dos últimas por \"You Oughta Know\")— y sigue siendo una de las artistas más jóvenes en ganar el Álbum del Año. El álbum redefinió lo que las artistas mujeres podían decir dentro del rock masivo, volviendo comercialmente viable la ira femenina cruda y sin pulir —y, con la misma fuerza, la vulnerabilidad y la esperanza—. Figuró en la lista de Rolling Stone de los 500 mejores álbumes de todos los tiempos y fue adaptado a un musical de Broadway, \"Jagged Little Pill\", cuyo elenco original grabó un disco que ganó el Grammy al Mejor Álbum de Teatro Musical.",
+  "evolution": "El siguiente disco de Morissette, \"Supposed Former Infatuation Junkie\" (3 de noviembre de 1998), batió el récord de ventas en la primera semana para un álbum de una artista mujer y debutó en el número 1 del Billboard 200. Su sencillo principal, \"Thank U\", junto con \"Uninvited\" —ganador de un Grammy y perteneciente a la banda de sonido de la película de 1998 \"City of Angels\"—, marcaron un rumbo más espiritual e introspectivo; ella misma dirigió la mayoría de los videos del álbum. Luego llegó \"MTV Unplugged\" (1999).\n\nCon \"Under Rug Swept\" (26 de febrero de 2002), Morissette escribió y autoprodujo el álbum entero, que debutó en el número 1 en 12 países y produjo el éxito \"Hands Clean\". En \"So-Called Chaos\" (2004) trabajó con el productor John Shanks; las compilaciones de rarezas y \"Jagged Little Pill Acoustic\" llegaron en 2005. \"Flavors of Entanglement\" (10 de junio de 2008), producido en gran parte por Guy Sigsworth, se volcó hacia texturas electrónicas y ambientales y le valió un Juno al Álbum Pop del Año.\n\n\"Havoc and Bright Lights\" (28 de agosto de 2012) marcó un giro hacia una composición más cálida, pop y espiritual tras convertirse en madre. Después de una larga pausa, \"Such Pretty Forks in the Road\" (31 de julio de 2020, postergado desde mayo por la pandemia) volvió a una escritura confesional y emocionalmente directa, centrada en la salud mental, las adicciones y las presiones sobre las mujeres. Luego se volcó a la música ambiental y de meditación con \"The Storm Before the Calm\" (17 de junio de 2022), coescrito con Dave Harrington, de Darkside, y publicado en la aplicación de meditación Calm. En paralelo, su catálogo fue recontextualizado por el musical \"Jagged Little Pill\", que se estrenó en el American Repertory Theater en 2018 y llegó a Broadway en diciembre de 2019.",
   "awards": {
     "grammys": [
-      "1996 (38th) — Album of the Year, \"Jagged Little Pill\"",
-      "1996 (38th) — Best Rock Album, \"Jagged Little Pill\"",
-      "1996 (38th) — Best Rock Song, \"You Oughta Know\"",
-      "1996 (38th) — Best Female Rock Vocal Performance, \"You Oughta Know\"",
-      "1998 (40th) — Best Music Film (Long Form), \"Jagged Little Pill, Live\"",
-      "1999 (41st) — Best Rock Song, \"Uninvited\"",
-      "1999 (41st) — Best Female Rock Vocal Performance, \"Uninvited\"",
-      "2021 (63rd) — Best Musical Theater Album, \"Jagged Little Pill\" (original Broadway cast recording)"
+      "1996 (38.ª edición) — Álbum del Año, \"Jagged Little Pill\"",
+      "1996 (38.ª edición) — Mejor Álbum de Rock, \"Jagged Little Pill\"",
+      "1996 (38.ª edición) — Mejor Canción de Rock, \"You Oughta Know\"",
+      "1996 (38.ª edición) — Mejor Interpretación Vocal de Rock Femenina, \"You Oughta Know\"",
+      "1998 (40.ª edición) — Mejor Película Musical (formato largo), \"Jagged Little Pill, Live\"",
+      "1999 (41.ª edición) — Mejor Canción de Rock, \"Uninvited\"",
+      "1999 (41.ª edición) — Mejor Interpretación Vocal de Rock Femenina, \"Uninvited\"",
+      "2021 (63.ª edición) — Mejor Álbum de Teatro Musical, \"Jagged Little Pill\" (grabación del elenco original de Broadway)"
     ],
     "nominations": [
-      "1996 (38th) — Best New Artist",
-      "1996 (38th) — Song of the Year, \"You Oughta Know\"",
-      "1997 (39th) — Record of the Year, \"Ironic\"",
-      "1997 (39th) — Best Music Video, \"Ironic\"",
-      "1999 (41st) — Best Song Written for Visual Media, \"Uninvited\"",
-      "2000 (42nd) — Female Pop Vocal Performance, \"Thank U\"",
-      "2001 (43rd) — Best Female Rock Vocal Performance, \"So Pure\""
+      "1996 (38.ª edición) — Mejor Artista Nuevo",
+      "1996 (38.ª edición) — Canción del Año, \"You Oughta Know\"",
+      "1997 (39.ª edición) — Grabación del Año, \"Ironic\"",
+      "1997 (39.ª edición) — Mejor Video Musical, \"Ironic\"",
+      "1999 (41.ª edición) — Mejor Canción Escrita para Medios Visuales, \"Uninvited\"",
+      "2000 (42.ª edición) — Mejor Interpretación Vocal Pop Femenina, \"Thank U\"",
+      "2001 (43.ª edición) — Mejor Interpretación Vocal de Rock Femenina, \"So Pure\""
     ],
     "other": [
-      "15 Juno Awards from 26 nominations (per junoawards.ca; some press and licensing sources report 13–14). Notable wins: Most Promising Female Vocalist (1992, \"Too Hot\"); Album of the Year, Best Rock Album, Female Vocalist of the Year, Songwriter of the Year and Single of the Year (1996, \"Jagged Little Pill\"/\"You Oughta Know\"); International Achievement Award (1997); Best Album (2000); Jack Richardson Producer of the Year (2003); Pop Album of the Year (2009, \"Flavors of Entanglement\"); Adult Contemporary Album of the Year (2021, \"Such Pretty Forks in the Road\").",
-      "3 MTV Video Music Awards (1996, for \"Ironic\": Best New Artist, Best Female Video, Best Editing) from 7 nominations.",
-      "2 American Music Awards (1997: Favorite Pop/Rock Female Artist and Favorite Pop/Rock Album for \"Jagged Little Pill\").",
-      "1 BRIT Award; 2 Golden Globe Award nominations.",
-      "Billboard Women in Music — Icon Award (2019); Billboard Canada Women in Music — Icon Award (2024).",
-      "Inducted into the Canadian Music Hall of Fame (2015) and the Canadian Songwriters Hall of Fame (2022); Canada's Walk of Fame (2005).",
-      "Tony Award nomination (2020) for the musical \"Jagged Little Pill\" (Best Musical), which won Best Book of a Musical (Diablo Cody) and Best Featured Actress in a Musical (Lauren Patten).",
-      "Polaris Heritage Prize short list for \"Jagged Little Pill\" (2016); listed on Rolling Stone's 500 Greatest Albums of All Time.",
-      "UN Global Tolerance Award (as cited in her 2015 Canadian Music Hall of Fame press materials)."
+      "15 premios Juno sobre 26 nominaciones (según junoawards.ca; algunas fuentes de prensa y licencias mencionan entre 13 y 14). Victorias destacadas: Vocalista Femenina Más Prometedora (1992, \"Too Hot\"); Álbum del Año, Mejor Álbum de Rock, Vocalista Femenina del Año, Compositora del Año y Sencillo del Año (1996, \"Jagged Little Pill\"/\"You Oughta Know\"); Premio al Logro Internacional (1997); Mejor Álbum (2000); Jack Richardson al Productor del Año (2003); Álbum Pop del Año (2009, \"Flavors of Entanglement\"); Álbum Adult Contemporary del Año (2021, \"Such Pretty Forks in the Road\").",
+      "3 MTV Video Music Awards (1996, por \"Ironic\": Mejor Artista Nuevo, Mejor Video Femenino, Mejor Edición) sobre 7 nominaciones.",
+      "2 American Music Awards (1997: Artista Femenina Favorita de Pop/Rock y Álbum Favorito de Pop/Rock por \"Jagged Little Pill\").",
+      "1 premio BRIT; 2 nominaciones al Globo de Oro.",
+      "Billboard Women in Music — Premio Icon (2019); Billboard Canada Women in Music — Premio Icon (2024).",
+      "Ingresó al Salón de la Fama de la Música Canadiense (2015) y al Salón de la Fama de los Compositores Canadienses (2022); Paseo de la Fama de Canadá (2005).",
+      "Nominación al premio Tony (2020) para el musical \"Jagged Little Pill\" (Mejor Musical), que ganó Mejor Libreto de un Musical (Diablo Cody) y Mejor Actriz de Reparto en un Musical (Lauren Patten).",
+      "Lista corta del Polaris Heritage Prize para \"Jagged Little Pill\" (2016); incluido en la lista de Rolling Stone de los 500 mejores álbumes de todos los tiempos.",
+      "Premio Global a la Tolerancia de la ONU (según lo citado en los materiales de prensa de su ingreso al Salón de la Fama de la Música Canadiense en 2015)."
     ]
   },
   "collaborations": [
-    "Glen Ballard — co-writer and producer of \"Jagged Little Pill\"; wrote or produced much of her early catalog and reunited with her on the Broadway musical.",
-    "Flea and Dave Navarro (Red Hot Chili Peppers) — bass and guitar on \"You Oughta Know\".",
-    "Benmont Tench (Tom Petty and the Heartbreakers) — organ on \"You Oughta Know\".",
-    "Guy Sigsworth — primary producer of \"Flavors of Entanglement\" (2008).",
-    "John Shanks — producer of \"So-Called Chaos\" (2004).",
-    "Dave Harrington (of Darkside) — co-writer and producer of \"The Storm Before the Calm\" (2022).",
-    "Alex Hope and Catherine Marks — producers of \"Such Pretty Forks in the Road\" (2020).",
-    "Diablo Cody — wrote the book for the Broadway musical \"Jagged Little Pill\"; co-authored the 2023 tie-in novel.",
-    "Diane Paulus — Tony-winning director of the \"Jagged Little Pill\" musical.",
-    "Madonna's Maverick Records — signed her for her international debut.",
-    "Demi Lovato — performed \"You Oughta Know\" together at the 2015 American Music Awards.",
-    "Souleye (Mario Treadway) — her husband, who contributed hand drums on \"The Storm Before the Calm\".",
-    "Taylor Hawkins (Foo Fighters) — longtime touring drummer who later presented her Billboard Icon Award in 2019.",
-    "Olivia Rodrigo — performed with Morissette in 2022 and inducted her into the Canadian Songwriters Hall of Fame."
+    "Glen Ballard — coautor y productor de \"Jagged Little Pill\"; escribió o produjo gran parte de su catálogo temprano y volvió a trabajar con ella en el musical de Broadway.",
+    "Flea y Dave Navarro (Red Hot Chili Peppers) — bajo y guitarra en \"You Oughta Know\".",
+    "Benmont Tench (Tom Petty and the Heartbreakers) — órgano en \"You Oughta Know\".",
+    "Guy Sigsworth — productor principal de \"Flavors of Entanglement\" (2008).",
+    "John Shanks — productor de \"So-Called Chaos\" (2004).",
+    "Dave Harrington (de Darkside) — coautor y productor de \"The Storm Before the Calm\" (2022).",
+    "Alex Hope y Catherine Marks — productoras de \"Such Pretty Forks in the Road\" (2020).",
+    "Diablo Cody — escribió el libreto del musical de Broadway \"Jagged Little Pill\"; coescribió la novela derivada de 2023.",
+    "Diane Paulus — directora ganadora del Tony del musical \"Jagged Little Pill\".",
+    "Maverick Records, el sello de Madonna — la contrató para su debut internacional.",
+    "Demi Lovato — interpretaron juntas \"You Oughta Know\" en los American Music Awards de 2015.",
+    "Souleye (Mario Treadway) — su esposo, que aportó percusión manual en \"The Storm Before the Calm\".",
+    "Taylor Hawkins (Foo Fighters) — baterista de gira durante muchos años, que luego le entregó el premio Icon de Billboard en 2019.",
+    "Olivia Rodrigo — se presentó junto a Morissette en 2022 y la introdujo en el Salón de la Fama de los Compositores Canadienses."
   ],
   "milestones": [
-    "1974 — Born June 1 in Ottawa, Ontario; twin brother Wade born 12 minutes earlier.",
-    "1977–1980 — Family lives in Lahr, Germany, before returning to Ottawa.",
-    "1987 — Records her first single, the electro-pop \"Fate Stay With Me.\"",
-    "1991 — Releases Canadian debut album \"Alanis\" (platinum in Canada).",
-    "1992 — \"Now Is the Time\" released; wins her first Juno (Most Promising Female Vocalist) at age 17.",
-    "1995 — Releases \"Jagged Little Pill\" (June 13) and signs with Madonna's Maverick Records.",
-    "1996 — Wins four Grammy Awards; honored with \"Alanis Morissette Day\" in Ottawa (March 8, 1996).",
-    "1998 — Releases \"Supposed Former Infatuation Junkie\"; \"Uninvited\" (from \"City of Angels\") becomes a Grammy-winning hit.",
-    "1999 — Releases \"MTV Unplugged\"; wins two Grammys for \"Uninvited.\"",
-    "2002 — Self-produced \"Under Rug Swept\" debuts at No. 1 in 12 countries.",
-    "2004 — Releases \"So-Called Chaos\" and hosts the 2004 JUNO Awards.",
-    "2005 — Becomes a U.S. citizen; releases \"The Collection\" and \"Jagged Little Pill Acoustic.\"",
-    "2008 — Releases \"Flavors of Entanglement.\"",
-    "2010 — Marries Mario \"Souleye\" Treadway (May 22); son Ever born (December 25, 2010).",
-    "2012 — Releases \"Havoc and Bright Lights.\"",
-    "2015 — Inducted into the Canadian Music Hall of Fame (March 15) at the Juno Awards.",
-    "2016 — Daughter Onyx born (June 23, 2016).",
-    "2018 — \"Jagged Little Pill\" musical premieres at the American Repertory Theater (May); son Winter born (August 8, 2019).",
-    "2019 — Musical opens on Broadway (December 5); receives Billboard Women in Music Icon Award (December 12); announces 25th anniversary tour.",
-    "2020 — Releases \"Such Pretty Forks in the Road\" (July 31).",
-    "2021 — Original \"Jagged Little Pill\" cast recording wins a Grammy (Best Musical Theater Album); the show closes on Broadway (December 17).",
-    "2022 — Releases \"The Storm Before the Calm\" (June 17); inducted into the Canadian Songwriters Hall of Fame (September 24).",
-    "2023 — Releases the holiday single \"Last Christmas\"; \"Jagged Little Pill: The Novel\" published.",
-    "2024 — Receives the Billboard Canada Women in Music Icon Award (September 7).",
-    "2025 — Makes her first-ever Glastonbury Festival appearance (June 27); launches a Las Vegas residency at the Colosseum, Caesars Palace (fall 2025).",
-    "2026 — Continues touring, including an LA residency titled \"Butterfly with a Machete.\""
+    "1974 — Nace el 1 de junio en Ottawa, Ontario; su hermano gemelo Wade nace 12 minutos antes.",
+    "1977–1980 — La familia vive en Lahr, Alemania, antes de volver a Ottawa.",
+    "1987 — Graba su primer sencillo, el electro-pop \"Fate Stay With Me\".",
+    "1991 — Publica su álbum debut canadiense, \"Alanis\" (platino en Canadá).",
+    "1992 — Sale \"Now Is the Time\"; gana su primer Juno (Vocalista Femenina Más Prometedora) a los 17 años.",
+    "1995 — Publica \"Jagged Little Pill\" (13 de junio) y firma con Maverick Records, el sello de Madonna.",
+    "1996 — Gana cuatro premios Grammy; es homenajeada con el \"Día de Alanis Morissette\" en Ottawa (8 de marzo de 1996).",
+    "1998 — Publica \"Supposed Former Infatuation Junkie\"; \"Uninvited\" (de \"City of Angels\") se convierte en un éxito ganador del Grammy.",
+    "1999 — Publica \"MTV Unplugged\"; gana dos Grammy por \"Uninvited\".",
+    "2002 — El autoproducido \"Under Rug Swept\" debuta en el número 1 en 12 países.",
+    "2004 — Publica \"So-Called Chaos\" y conduce los premios Juno de 2004.",
+    "2005 — Se convierte en ciudadana estadounidense; publica \"The Collection\" y \"Jagged Little Pill Acoustic\".",
+    "2008 — Publica \"Flavors of Entanglement\".",
+    "2010 — Se casa con Mario \"Souleye\" Treadway (22 de mayo); nace su hijo Ever (25 de diciembre de 2010).",
+    "2012 — Publica \"Havoc and Bright Lights\".",
+    "2015 — Ingresa al Salón de la Fama de la Música Canadiense (15 de marzo) en la gala de los Juno Awards.",
+    "2016 — Nace su hija Onyx (23 de junio de 2016).",
+    "2018 — El musical \"Jagged Little Pill\" se estrena en el American Repertory Theater (mayo); nace su hijo Winter (8 de agosto de 2019).",
+    "2019 — El musical se estrena en Broadway (5 de diciembre); recibe el premio Icon de Billboard Women in Music (12 de diciembre); anuncia la gira del 25.º aniversario.",
+    "2020 — Publica \"Such Pretty Forks in the Road\" (31 de julio).",
+    "2021 — La grabación del elenco original de \"Jagged Little Pill\" gana un Grammy (Mejor Álbum de Teatro Musical); el show cierra en Broadway (17 de diciembre).",
+    "2022 — Publica \"The Storm Before the Calm\" (17 de junio); ingresa al Salón de la Fama de los Compositores Canadienses (24 de septiembre).",
+    "2023 — Publica el sencillo navideño \"Last Christmas\"; se edita \"Jagged Little Pill: The Novel\".",
+    "2024 — Recibe el premio Icon de Billboard Canada Women in Music (7 de septiembre).",
+    "2025 — Se presenta por primera vez en el Festival de Glastonbury (27 de junio); lanza una residencia en Las Vegas, en el Colosseum de Caesars Palace (otoño boreal de 2025).",
+    "2026 — Continúa de gira, incluyendo una residencia en Los Ángeles titulada \"Butterfly with a Machete\"."
   ],
-  "currentTopics": "As of 2026, Morissette remains active as a touring artist, performing career-spanning sets at festivals and arenas — including a long-awaited debut at Glastonbury on the iconic Pyramid Stage in June 2025, a fall 2025 Las Vegas residency at the Colosseum at Caesars Palace, and an ongoing 2026 run including an Inglewood, California residency billed \"Butterfly with a Machete.\" She has said she intends to keep performing as long as audiences will have her.\n\nAlongside music, she has built a substantial media and wellness practice. Her long-running podcast, \"Conversation with Alanis Morissette,\" features in-depth interviews on psychology, neuroscience, attachment, addiction and healing with figures including Dr. Gabor Maté, Dr. Dan Siegel, Brené Brown-adjacent thought leaders (authors like Byron Katie, Gordon Neufeld, and Daniel Goleman), and couples researchers Gottman and Julie Schwartz Gottman. In 2026 she announced a new platform, \"The Deeply,\" for conversations about trauma, well-being, and personal growth. She has moved her family from Los Angeles to Northern California.\n\nMorissette is an open advocate on mental health and women's health. She has spoken publicly about nearly a decade-long experience with postpartum depression (on \"CBS This Morning,\" 2019), has supported the National Eating Disorders Association (she ran a marathon for NEDA in 2009), and champions attachment parenting, co-founded the non-profit \"Relationships First,\" and has participated in MusiCares benefits (including the 2015 Bob Dylan Person of the Year tribute). More recently she has been an outspoken voice on menopause and hormone-replacement therapy, describing menopause as a \"truth serum\" in interviews published in 2026. Nearly 30 years after her breakthrough, the \"Jagged Little Pill\" musical continues to be produced around the world, keeping her catalog in front of new generations.",
+  "currentTopics": "Hacia 2026, Morissette sigue activa como artista de gira, con presentaciones que recorren toda su carrera en festivales y arenas —incluido un esperado debut en Glastonbury, en el icónico Pyramid Stage, en junio de 2025; una residencia en Las Vegas en el otoño boreal de 2025, en el Colosseum de Caesars Palace; y una serie de shows en 2026 que incluye una residencia en Inglewood, California, titulada \"Butterfly with a Machete\". Ha dicho que piensa seguir actuando mientras el público quiera tenerla arriba de un escenario.\n\nMás allá de la música, construyó una sólida trayectoria en medios y bienestar. Su podcast de larga trayectoria, \"Conversation with Alanis Morissette\", propone entrevistas en profundidad sobre psicología, neurociencia, apego, adicciones y sanación con figuras como el Dr. Gabor Maté, el Dr. Dan Siegel, referentes cercanos a Brené Brown (autores como Byron Katie, Gordon Neufeld y Daniel Goleman) y los investigadores de pareja Gottman y Julie Schwartz Gottman. En 2026 anunció una nueva plataforma, \"The Deeply\", dedicada a conversaciones sobre trauma, bienestar y crecimiento personal. Mudó a su familia de Los Ángeles al norte de California.\n\nMorissette es una defensora abierta de la salud mental y la salud de las mujeres. Habló públicamente de casi una década de experiencia con depresión posparto (en \"CBS This Morning\", 2019), apoyó a la National Eating Disorders Association (corrió una maratón para NEDA en 2009), promueve la crianza con apego, cofundó la organización sin fines de lucro \"Relationships First\" y participó en beneficios de MusiCares (incluido el homenaje a Bob Dylan como Persona del Año en 2015). Más recientemente se convirtió en una voz destacada sobre la menopausia y la terapia de reemplazo hormonal, describiendo la menopausia como un \"suero de la verdad\" en entrevistas publicadas en 2026. Casi 30 años después de su gran salto a la fama, el musical \"Jagged Little Pill\" se sigue produciendo en todo el mundo, manteniendo su catálogo vigente para nuevas generaciones.",
   "quotes": [
     {
-      "text": "The thing I always default to is that I'll always be here to write songs.",
-      "attribution": "Alanis Morissette, quoted in her GRAMMY.com artist biography.",
+      "text": "A lo que siempre vuelvo es a esto: siempre voy a estar acá para escribir canciones.",
+      "attribution": "Alanis Morissette, citada en su biografía de artista en GRAMMY.com.",
       "source": "https://www.grammy.com/artists/alanis-morissette/4915"
     },
     {
-      "text": "When I hear that song, I hear the anger as a protection around the searing vulnerability. I was mortified and devastated. It was a lot easier for me to be angry and feel the power from that anger versus the broken, horrified woman on the floor.",
-      "attribution": "Alanis Morissette, on the song \"You Oughta Know,\" in a Spotify interview (reproduced by Jon Kutner).",
+      "text": "Cuando escucho esa canción, escucho la ira como una protección alrededor de una vulnerabilidad abrasadora. Estaba mortificada y devastada. Me resultaba mucho más fácil estar enojada y sentir el poder de esa ira que ser la mujer rota y horrorizada tirada en el piso.",
+      "attribution": "Alanis Morissette, sobre la canción \"You Oughta Know\", en una entrevista para Spotify (reproducida por Jon Kutner).",
       "source": "https://www.jonkutner.com/you-oughta-know-alanis-morissette"
     },
     {
-      "text": "There were no guide tracks, we just had the vocal to work from.... and we basically jammed until we found something we were both happy with. Alanis was happy too.",
-      "attribution": "Dave Navarro, guitarist on \"You Oughta Know,\" describing how he and Flea recorded the track.",
+      "text": "No había pistas guía, solo teníamos la voz para trabajar... y básicamente improvisamos hasta encontrar algo con lo que los dos estuviéramos conformes. Alanis también quedó contenta.",
+      "attribution": "Dave Navarro, guitarrista en \"You Oughta Know\", sobre cómo él y Flea grabaron el tema.",
       "source": "https://en.wikipedia.org/wiki/You_Oughta_Know"
     },
     {
-      "text": "Ever since I was a young child, the one thing I always saw was me travelling around the planet and singing. I'll be doing that until people won't have me any more, and probably still after that.",
-      "attribution": "Alanis Morissette, quoted by the Canadian Songwriters Hall of Fame.",
+      "text": "Desde que era chica, lo único que siempre me imaginé fue viajando por el planeta y cantando. Voy a seguir haciendo eso hasta que la gente ya no me quiera más, y probablemente incluso después de eso.",
+      "attribution": "Alanis Morissette, citada por el Salón de la Fama de los Compositores Canadienses.",
       "source": "https://www.cshf.ca/2022-gala-induction-alanis-morissette"
     },
     {
-      "text": "I remember hearing Alanis for the first time when I was about 13. I was in the car with my parents when Jagged Little Pill came on. I heard \"Perfect\", I was like, 'Oh, my God… You can write songs like that?' I just looked at music and songwriting in a completely different way.",
-      "attribution": "Olivia Rodrigo, on Morissette's influence, ahead of inducting her into the Canadian Songwriters Hall of Fame (2022).",
+      "text": "Recuerdo haber escuchado a Alanis por primera vez cuando tenía unos 13 años. Estaba en el auto con mis padres cuando sonó Jagged Little Pill. Escuché \"Perfect\" y pensé: 'Dios mío... ¿Se pueden escribir canciones así?' A partir de ahí miré la música y la composición de una manera completamente distinta.",
+      "attribution": "Olivia Rodrigo, sobre la influencia de Morissette, antes de presentar su ingreso al Salón de la Fama de los Compositores Canadienses (2022).",
       "source": "https://www.udiscovermusic.com/news/olivia-rodrigo-alanis-morissette-canadian-songwriters"
     },
     {
-      "text": "When I first met Souleye, I was a really big fan – like super crushed out... I had no thought that we'd be able to even date.",
-      "attribution": "Alanis Morissette, on meeting her future husband, in Billboard (2012).",
+      "text": "Cuando conocí a Souleye era una fan enorme, estaba total y completamente enamorada... Ni se me pasaba por la cabeza que pudiéramos siquiera salir juntos.",
+      "attribution": "Alanis Morissette, sobre cómo conoció a quien sería su esposo, en Billboard (2012).",
       "source": "https://www.hellomagazine.com/healthandbeauty/mother-and-baby/842913/inside-alanis-morissette-private-family-life-with-three-children/"
     },
     {
-      "text": "In the year or two between albums, I will have filled up two or three journals. When I've written something in my journal that might be an idea for a song, I put a star next to it.",
-      "attribution": "Alanis Morissette on her songwriting process, quoted by the Canadian Songwriters Hall of Fame (citing an interview with SongwriterUniverse).",
+      "text": "En el año o los dos años entre discos, suelo llenar dos o tres diarios. Cuando escribo algo en mi diario que puede ser una idea para una canción, le pongo una estrella al lado.",
+      "attribution": "Alanis Morissette, sobre su proceso de composición, citada por el Salón de la Fama de los Compositores Canadienses (a partir de una entrevista con SongwriterUniverse).",
       "source": "https://www.cshf.ca/2022-gala-induction-alanis-morissette"
     }
   ],
@@ -264,7 +264,7 @@ const biografia = {
   ]
 };
 
-const discografia = [
+export const discografia = [
   {
     "id": "alanis-1991",
     "title": "Alanis",
@@ -274,9 +274,9 @@ const discografia = [
     "coverRef": {
       "src": "https://www.discogs.com/master/478923-Alanis-Morissette-Original-Album-Series",
       "note": "Debut album cover art is copyrighted by MCA Records / Universal Music Group. Not freely licensed.",
-      "legalAlternative": "Stream or listen on official platforms (Spotify, Apple Music); display the cover only via a licensed source or use an editorial placeholder."
+      "legalAlternative": "Escuchar en plataformas oficiales (Spotify, Apple Music); mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "The Canadian-only debut by a 16-year-old Alanis Morissette, a polished dance-pop record co-written with producer Leslie Howe and released on MCA Records Canada. It launched the teenage singer into the Canadian fast lane and earned a Juno Award. Morissette later distanced herself from this era, and Maverick had it pulled from circulation after Jagged Little Pill's success.",
+    "description": "El debut de una Alanis Morissette de 16 años, editado solo en Canadá: un disco de dance-pop pulido, coescrito con el productor Leslie Howe y publicado en MCA Records Canada. Catapultó a la cantante adolescente al primer plano canadiense y le valió un premio Juno. Morissette luego tomó distancia de esta etapa, y Maverick logró que se retirara de circulación tras el éxito de Jagged Little Pill.",
     "tracks": [
       {
         "title": "Feel Your Love",
@@ -323,16 +323,16 @@ const discografia = [
       "Leslie Howe"
     ],
     "awards": [
-      "Juno Award for Most Promising Female Vocalist of the Year (1992)",
-      "Juno nominations for Single of the Year and Best Dance Recording for 'Too Hot'",
-      "Certified Platinum in Canada"
+      "Premio Juno a la Vocalista Femenina Más Prometedora del Año (1992)",
+      "Nominaciones al Juno a Sencillo del Año y Mejor Grabación de Dance por 'Too Hot'",
+      "Certificado Platino en Canadá"
     ],
-    "context": "Released only in Canada on April 17, 1991 by MCA Records Canada, recorded at Distortion Studios in Ottawa. Morissette co-wrote every track with Leslie Howe. Its dance-pop sound and image (long hair, teen appeal) led critics to nickname her 'the Debbie Gibson of Canada,' and she even opened for Vanilla Ice. After JLP's success, Maverick persuaded MCA to withdraw it from circulation, and the album is long out of print.",
-    "reception": "A modest teen-pop success in Canada, dated by its late-80s dance production and fluffy adolescent lyrics. Retrospective reviews treat it as a curiosity, notable mainly for how far Morissette would later travel stylistically and lyrically.",
+    "context": "Editado solo en Canadá el 17 de abril de 1991 por MCA Records Canada, grabado en los estudios Distortion de Ottawa. Morissette coescribió cada tema con Leslie Howe. Su sonido dance-pop y su imagen (pelo largo, atractivo adolescente) llevaron a la crítica a apodarla 'la Debbie Gibson de Canadá', y hasta llegó a telonear a Vanilla Ice. Tras el éxito de JLP, Maverick convenció a MCA de retirarlo de circulación, y el álbum lleva mucho tiempo descatalogado.",
+    "reception": "Un éxito modesto de teen-pop en Canadá, con una producción dance fechada en el estilo de fines de los 80 y letras adolescentes livianas. Las reseñas retrospectivas lo tratan como una curiosidad, notable sobre todo por lo lejos que Morissette llegaría después, tanto estilística como líricamente.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -346,10 +346,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/31520-Alanis-Now-Is-The-Time",
-      "note": "Album artwork is copyrighted by MCA Records / Universal Music Group. Not freely licensed.",
-      "legalAlternative": "Stream or listen via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de MCA Records / Universal Music Group. No tiene licencia libre.",
+      "legalAlternative": "Escuchar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "Morissette's second and final MCA Canada record, a ballad-driven pop album recorded with Leslie Howe (and co-writer Serge Cote) that traded the debut's glossy dance production for more thoughtful, darker songwriting. It fulfilled her contract but sold poorly and is her lowest-selling album.",
+    "description": "El segundo y último disco de Morissette para MCA Canada, un álbum pop orientado a las baladas y grabado con Leslie Howe (y el coautor Serge Cote) que dejó atrás la producción dance brillante del debut por una composición más reflexiva y oscura. Cumplió con su contrato pero vendió poco y es su álbum menos vendido.",
     "tracks": [
       {
         "title": "Real World",
@@ -396,14 +396,14 @@ const discografia = [
       "Leslie Howe"
     ],
     "awards": [
-      "Certified Gold in Canada"
+      "Certificado Oro en Canadá"
     ],
-    "context": "Released only in Canada (August 1, 1992 per the alanis-m.com archives; Wikipedia lists October 20, 1992). Recorded at Distortion Studios, Ottawa, and written with Leslie Howe and Serge Cote. It was Morissette's last album for MCA and, like its predecessor, was withdrawn from circulation after Jagged Little Pill. Four singles were issued, with none charting strongly.",
-    "reception": "Critically and commercially a letdown, it has been described as a bridge between her teen-pop past and the more earnest songwriting that followed. Retrospective listeners consider it darker and more sincere than the debut but still a minor work.",
+    "context": "Editado solo en Canadá (1 de agosto de 1992 según el archivo de alanis-m.com; Wikipedia consigna el 20 de octubre de 1992). Grabado en los estudios Distortion de Ottawa y escrito junto a Leslie Howe y Serge Cote. Fue el último álbum de Morissette para MCA y, como su predecesor, fue retirado de circulación tras Jagged Little Pill. Se editaron cuatro sencillos, ninguno con gran repercusión en listas.",
+    "reception": "Una decepción tanto crítica como comercial, descrita como un puente entre su pasado de teen-pop y la composición más sincera que vendría después. Los oyentes retrospectivos lo consideran más oscuro y sincero que el debut, aunque sigue siendo una obra menor.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -417,10 +417,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/31513-Alanis-Morissette-Jagged-Little-Pill",
-      "note": "Cover art is copyrighted by Maverick Recording Company / Warner Records. Not freely licensed.",
-      "legalAlternative": "Stream or purchase on official platforms; display the cover only via a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Maverick Recording Company / Warner Records. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "The album that made Morissette a global phenomenon. A blistering, confessional alt-rock record written with Glen Ballard, driven by her vocal intensity and scathing lyrics. It topped charts worldwide, won Album of the Year at the 1996 Grammys, and became one of the best-selling albums of all time.",
+    "description": "El álbum que convirtió a Morissette en un fenómeno mundial. Un disco de rock alternativo abrasador y confesional, escrito junto a Glen Ballard, sostenido por la intensidad de su voz y letras mordaces. Encabezó listas en todo el mundo, ganó el Álbum del Año en los Grammy de 1996 y se convirtió en uno de los discos más vendidos de la historia.",
     "tracks": [
       {
         "title": "All I Really Want",
@@ -476,22 +476,22 @@ const discografia = [
       "Glen Ballard"
     ],
     "awards": [
-      "Grammy Award for Album of the Year (1996)",
-      "Grammy Award for Best Rock Album (1996)",
-      "Grammy Award for Best Female Rock Vocal Performance for 'You Oughta Know' (1996)",
-      "Grammy Award for Best Rock Song for 'You Oughta Know' (1996)",
-      "RIAA Diamond / 16x Platinum in the U.S.; broke sales records tied for best-selling debut",
-      "Multiple singles: 'You Oughta Know', 'Hand in My Pocket', 'Ironic', 'You Learn', 'Head Over Feet'"
+      "Grammy al Álbum del Año (1996)",
+      "Grammy al Mejor Álbum de Rock (1996)",
+      "Grammy a la Mejor Interpretación Vocal de Rock Femenina por 'You Oughta Know' (1996)",
+      "Grammy a la Mejor Canción de Rock por 'You Oughta Know' (1996)",
+      "Diamante RIAA / 16 veces Platino en EE. UU.; batió récords de ventas y empató como el debut más vendido",
+      "Varios sencillos: 'You Oughta Know', 'Hand in My Pocket', 'Ironic', 'You Learn', 'Head Over Feet'"
     ],
-    "context": "After being nearly dropped following her Canadian teen-pop years, Morissette moved to Los Angeles and worked with producer Glen Ballard. Recorded largely live in the studio (with key parts by Flea and Dave Navarro on 'You Oughta Know'), JLP was released June 13, 1995 on Maverick Records. It spawned six radio hits and spent over a year on the Billboard 200, transforming Morissette into a global star and defining mid-90s alternative rock. Some editions include bonus tracks 'You Oughta Know (Jimmy the Saint Blend)' and 'Your House (A Capella)'.",
-    "reception": "Widely championed for its raw emotional honesty, memorable hooks, and Morissette's powerful vocal delivery. Critics praised its intensity, though some found the relentless anger exhausting. Retrospectively regarded as a landmark of the decade and a touchstone for later confessional singer-songwriters.",
+    "context": "Tras estar a punto de quedarse sin sello después de sus años de teen-pop canadiense, Morissette se mudó a Los Ángeles y trabajó con el productor Glen Ballard. Grabado en gran parte en vivo en el estudio (con partes clave de Flea y Dave Navarro en 'You Oughta Know'), JLP salió a la venta el 13 de junio de 1995 en Maverick Records. Generó seis éxitos radiales y pasó más de un año en el Billboard 200, transformando a Morissette en una estrella global y definiendo el rock alternativo de mediados de los 90. Algunas ediciones incluyen los temas extra 'You Oughta Know (Jimmy the Saint Blend)' y 'Your House (A Capella)'.",
+    "reception": "Ampliamente celebrado por su honestidad emocional cruda, sus estribillos memorables y la potente interpretación vocal de Morissette. La crítica elogió su intensidad, aunque algunos encontraron agotadora la ira incesante. Retrospectivamente se lo considera un hito de la década y un punto de referencia para las cantautoras confesionales que vinieron después.",
     "sales": {
-      "figure": "Over 33 million copies sold worldwide; 16x Platinum (RIAA) in the U.S.",
+      "figure": "Más de 33 millones de copias vendidas en todo el mundo; 16 veces Platino (RIAA) en EE. UU.",
       "source": "https://en.wikipedia.org/wiki/Jagged_Little_Pill"
     },
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       },
       {
@@ -509,10 +509,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/29071-Alanis-Morissette-Supposed-Former-Infatuation-Junkie",
-      "note": "Cover art is copyrighted by Maverick Recording Company / Warner Records. Not freely licensed (the design incorporates eight Buddhist precepts).",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Maverick Recording Company / Warner Records. No tiene licencia libre (el diseño incorpora los ocho preceptos budistas).",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "The eagerly awaited follow-up to Jagged Little Pill. Introspective, sprawling, and experimental, it draws on Morissette's travels to India and a more meditative spiritual outlook, trading the pop hooks for densely worded, personal songwriting. It debuted at number one, setting a first-week sales record for a female artist at the time.",
+    "description": "El esperadísimo sucesor de Jagged Little Pill. Introspectivo, extenso y experimental, se nutre de los viajes de Morissette a la India y de una mirada espiritual más meditativa, cambiando los estribillos pop por una composición personal y densa en palabras. Debutó en el número uno, marcando en su momento un récord de ventas en la primera semana para una artista mujer.",
     "tracks": [
       {
         "title": "Front Row",
@@ -587,15 +587,15 @@ const discografia = [
       "Glen Ballard"
     ],
     "awards": [
-      "Debuted at No. 1 on the Billboard 200 with a then-record first-week sales figure for a female artist",
-      "Grammy nomination for Best Female Pop Vocal Performance for 'Thank U'"
+      "Debutó en el número 1 del Billboard 200, con una cifra de ventas en la primera semana que fue récord para una artista mujer en ese momento",
+      "Nominación al Grammy a la Mejor Interpretación Vocal Pop Femenina por 'Thank U'"
     ],
-    "context": "Released November 3, 1998 on Maverick Records. Inspired by her trip to India in late 1996, the cover displays eight Buddhist precepts, and the title comes from a lyric in 'So Pure'. The first single, 'Thank U', reached the US top 20. Morissette promoted it with extensive touring, including a new band.",
-    "reception": "Mixed to positive. Critics divided over its long, wordy tracks and somber mood versus the immediate appeal of JLP, though many praised Morissette's maturity and risk-taking. It remains a cult favorite among her fans.",
+    "context": "Editado el 3 de noviembre de 1998 en Maverick Records. Inspirado en su viaje a la India a fines de 1996, la portada muestra los ocho preceptos budistas, y el título proviene de una línea de 'So Pure'. El primer sencillo, 'Thank U', llegó al top 20 en Estados Unidos. Morissette lo promocionó con una extensa gira, con una nueva banda.",
+    "reception": "Mixta a positiva. La crítica se dividió entre los temas largos y densos en palabras y el clima sombrío frente al atractivo inmediato de JLP, aunque muchos elogiaron la madurez y el riesgo asumido por Morissette. Sigue siendo un favorito de culto entre sus fans.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -609,10 +609,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://en.wikipedia.org/wiki/MTV_Unplugged_(Alanis_Morissette_album)",
-      "note": "Cover art is copyrighted by Maverick Recording Company / Warner Records. Not freely licensed.",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Maverick Recording Company / Warner Records. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "Morissette's first live album, recorded before a small audience at the Brooklyn Academy of Music for MTV Unplugged. Stripped-down acoustic arrangements of her hits and album cuts plus a cover of the Police's 'King of Pain' highlight a set that reveals the emotional depth in her vocals.",
+    "description": "El primer álbum en vivo de Morissette, grabado ante un público reducido en la Brooklyn Academy of Music para MTV Unplugged. Arreglos acústicos despojados de sus éxitos y temas de álbum, más una versión de 'King of Pain' de The Police, destacan en un show que revela la profundidad emocional de su voz.",
     "tracks": [
       {
         "title": "You Learn",
@@ -667,17 +667,17 @@ const discografia = [
       "Alanis Morissette"
     ],
     "awards": [
-      "Certified Gold in the U.S.; sold over 673,000 copies in the U.S. by 2012"
+      "Certificado Oro en EE. UU.; vendió más de 673.000 copias en ese país hacia 2012"
     ],
-    "context": "Recorded September 18, 1999 and released November 9, 1999 on Maverick Records. Twelve tracks appeared; Morissette also performed 'Baba', 'Thank U', and 'Your House' live but they were omitted. She played guitar, harmonica, and flute, backed by a new ensemble.",
-    "reception": "Praise for Morissette's assured performance and the illuminating acoustic reinterpretations; the 'King of Pain' cover and 'That I Would Be Good' are often singled out as the strongest moments.",
+    "context": "Grabado el 18 de septiembre de 1999 y editado el 9 de noviembre de 1999 en Maverick Records. Incluyó doce temas; Morissette también interpretó en vivo 'Baba', 'Thank U' y 'Your House', pero quedaron afuera del corte final. Tocó guitarra, armónica y flauta, acompañada por un nuevo grupo de músicos.",
+    "reception": "Elogios para la interpretación segura de Morissette y las reveladoras reinterpretaciones acústicas; la versión de 'King of Pain' y 'That I Would Be Good' suelen señalarse como los momentos más fuertes.",
     "sales": {
-      "figure": "Over 673,000 copies in the U.S. (as of 2012)",
+      "figure": "Más de 673.000 copias en EE. UU. (hacia 2012)",
       "source": "https://en.wikipedia.org/wiki/MTV_Unplugged_(Alanis_Morissette_album)"
     },
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       },
       {
@@ -695,10 +695,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/28850-Alanis-Morissette-Under-Rug-Swept",
-      "note": "Cover art is copyrighted by Maverick Recording Company / Warner Records. Not freely licensed.",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Maverick Recording Company / Warner Records. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "Morissette's first album written, produced, and largely performed entirely by herself, an ambitious and self-assured record of polished pop-rock. It debuted at number one on the Billboard 200 and features the singles 'Hands Clean' and 'Precious Illusions'.",
+    "description": "El primer álbum que Morissette escribió, produjo y tocó casi por completo ella sola, un disco ambicioso y seguro de sí mismo de pop-rock pulido. Debutó en el número uno del Billboard 200 e incluye los sencillos 'Hands Clean' y 'Precious Illusions'.",
     "tracks": [
       {
         "title": "21 Things I Want in a Lover",
@@ -749,15 +749,15 @@ const discografia = [
       "Alanis Morissette"
     ],
     "awards": [
-      "Debuted at No. 1 on the Billboard 200 (her third chart-topper)",
-      "RIAA Gold certification in the U.S."
+      "Debutó en el número 1 del Billboard 200 (su tercer álbum en llegar a la cima)",
+      "Certificación Oro de la RIAA en EE. UU."
     ],
-    "context": "Released February 26, 2002 on Maverick Records. Written, produced, and played largely by Morissette herself (with a supporting band including Chris Chaney, Gary Novak, and Tim Thorney) during the 2001 sessions, and promoted by her 'Towards Our Union Mended' world tour. 'Simple Together' and 'Purgatorying' were left off the album and later surfaced on Feast on Scraps.",
-    "reception": "Generally positive. Reviewers noted a brighter, more polished and less relentless album than the JLP era, with 'Hands Clean' praised as a highlight, though some felt the glossy production diluted her edge.",
+    "context": "Editado el 26 de febrero de 2002 en Maverick Records. Escrito, producido y tocado en su mayor parte por la propia Morissette (con una banda de apoyo que incluía a Chris Chaney, Gary Novak y Tim Thorney) durante las sesiones de 2001, y promocionado con su gira mundial 'Towards Our Union Mended'. 'Simple Together' y 'Purgatorying' quedaron afuera del álbum y luego aparecieron en Feast on Scraps.",
+    "reception": "En general positiva. La crítica notó un álbum más luminoso, pulido y menos incesante que el de la era JLP, con 'Hands Clean' elogiado como un punto alto, aunque algunos sintieron que la producción brillante diluía su filo característico.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -771,10 +771,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/232531-Alanis-Morissette-Feast-On-Scraps",
-      "note": "Cover art is copyrighted by Maverick Recording Company / Warner Records. Not freely licensed.",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Maverick Recording Company / Warner Records. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "A CD/DVD package combining a live concert film recorded in Rotterdam with an audio CD of B-sides and unreleased studio tracks left off Under Rug Swept. It offers a glimpse into the more experimental edges of the Under Rug Swept writing sessions.",
+    "description": "Un paquete de CD/DVD que combina una película de un concierto en vivo grabado en Rotterdam con un CD de lados B y temas de estudio inéditos que quedaron afuera de Under Rug Swept. Ofrece un vistazo a los bordes más experimentales de las sesiones de composición de Under Rug Swept.",
     "tracks": [
       {
         "title": "Fear of Bliss",
@@ -810,15 +810,15 @@ const discografia = [
       "Alanis Morissette"
     ],
     "awards": [
-      "Brazil: Gold certification for the video DVD",
-      "'Simple Together' charted at No. 14 in Chile"
+      "Brasil: certificación Oro para el DVD",
+      "'Simple Together' llegó al puesto 14 en Chile"
     ],
-    "context": "Released December 10, 2002 on Maverick Records. The concert DVD was filmed August 13, 2002 at the Rotterdam Ahoy, and the CD collects songs written during the Under Rug Swept sessions. A promotional double A-side of 'Simple Together' and 'Bent for You' was released in Europe, and 'Offer' became popular in Brazil. Some songs ('Awakening Americans' and 'Symptoms') were cut from the track listing, so the full US CD tracklist is not conclusively verified here.",
-    "reception": "Largely positive, with reviewers praising the harder read of 'Sister Blister', the touching break-up ballad 'Simple Together', and the acoustic 'Hands Clean'. The DVD's live footage was also well received.",
+    "context": "Editado el 10 de diciembre de 2002 en Maverick Records. El DVD del concierto fue filmado el 13 de agosto de 2002 en el Rotterdam Ahoy, y el CD reúne canciones escritas durante las sesiones de Under Rug Swept. En Europa se editó un doble lado A promocional con 'Simple Together' y 'Bent for You', y 'Offer' se volvió popular en Brasil. Algunos temas ('Awakening Americans' y 'Symptoms') fueron eliminados de la lista, por lo que el tracklist completo del CD estadounidense no está confirmado de forma concluyente aquí.",
+    "reception": "Mayormente positiva, con la crítica elogiando el tono más duro de 'Sister Blister', la conmovedora balada de ruptura 'Simple Together' y la versión acústica de 'Hands Clean'. Las imágenes en vivo del DVD también fueron bien recibidas.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -832,10 +832,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/28818-Alanis-Morissette-So-Called-Chaos",
-      "note": "Cover art is copyrighted by Maverick Recording Company / Warner Records. Not freely licensed.",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Maverick Recording Company / Warner Records. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "A tighter, more commercial set of pop-rock songs co-produced by Morissette, marked by a lighter, more positive tone than her earlier records. It became her lowest-selling album in the U.S. at the time, led by the Adult Top 40 success of 'Everything'.",
+    "description": "Un conjunto de canciones pop-rock más ajustado y comercial, coproducido por Morissette, marcado por un tono más liviano y positivo que sus discos anteriores. En su momento fue su álbum menos vendido en EE. UU., impulsado por el éxito de 'Everything' en las listas Adult Top 40.",
     "tracks": [
       {
         "title": "Eight Easy Steps",
@@ -884,15 +884,15 @@ const discografia = [
       "John Shanks"
     ],
     "awards": [
-      "Debuted at No. 5 on the Billboard 200",
-      "'Everything' reached No. 1 on the Billboard Adult Top 40 airplay chart"
+      "Debutó en el número 5 del Billboard 200",
+      "'Everything' llegó al número 1 de la lista de radio Adult Top 40 de Billboard"
     ],
-    "context": "Released May 18, 2004 on Maverick Records, her first album not to top the Billboard 200 since JLP. The album was a response to a happier personal phase (her engagement and move to England), featuring co-writers including Tim Thorney and John Shanks. The single 'Everything' was a major Adult Top 40 hit despite a weak Hot 100 showing.",
-    "reception": "Mixed to negative. Critics appreciated the more upbeat, less confessional tone but found the material slight compared to her best work; Rolling Stone and others considered it one of her weaker efforts, though 'Everything' was widely praised.",
+    "context": "Editado el 18 de mayo de 2004 en Maverick Records, su primer álbum en no encabezar el Billboard 200 desde JLP. El disco fue una respuesta a una etapa personal más feliz (su compromiso y su mudanza a Inglaterra), con coautores como Tim Thorney y John Shanks. El sencillo 'Everything' fue un gran éxito en Adult Top 40 pese a un desempeño flojo en el Hot 100.",
+    "reception": "Mixta a negativa. La crítica apreció el tono más optimista y menos confesional, pero encontró el material liviano en comparación con su mejor trabajo; Rolling Stone y otros medios lo consideraron uno de sus discos más flojos, aunque 'Everything' fue ampliamente elogiada.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -906,10 +906,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/28749-Alanis-Morissette-Jagged-Little-Pill-Acoustic",
-      "note": "Cover art is copyrighted by Maverick Recording Company / Warner Records. Not freely licensed.",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Maverick Recording Company / Warner Records. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "A fully re-recorded acoustic version of Jagged Little Pill, released for the original album's 10th anniversary. The stripped-back, mature arrangements offer a new perspective on the songs that defined her breakthrough.",
+    "description": "Una versión acústica de Jagged Little Pill, regrabada por completo y editada para el décimo aniversario del álbum original. Los arreglos despojados y maduros ofrecen una nueva mirada sobre las canciones que definieron su gran salto a la fama.",
     "tracks": [
       {
         "title": "All I Really Want",
@@ -964,18 +964,18 @@ const discografia = [
       "Glen Ballard"
     ],
     "awards": [
-      "Single 'Hand in My Pocket' (acoustic) released July 2005",
-      "Certified Gold in the U.S.; over 372,000 copies sold in the U.S. by 2010"
+      "Sencillo 'Hand in My Pocket' (versión acústica) editado en julio de 2005",
+      "Certificado Oro en EE. UU.; más de 372.000 copias vendidas en ese país hacia 2010"
     ],
-    "context": "Released mid-2005 on Rhino/Maverick and promoted on a small theatre tour. It was first sold exclusively at Starbucks cafes from mid-June before a wide release, and was accompanied by a red-and-white 'jagged' redesign referencing the original cover. The last track, 'Wake Up / Your House', is presented as a combined medley on many editions.",
-    "reception": "Mixed. Some critics felt the intimate arrangements and Morissette's mature voice added new dimension; others felt the softened versions lost the original's raw anger and edge.",
+    "context": "Editado a mediados de 2005 en Rhino/Maverick y promocionado con una pequeña gira de teatros. Al principio se vendió en exclusiva en cafeterías Starbucks desde mediados de junio, antes de su lanzamiento general, y llegó acompañado de un rediseño 'quebrado' en rojo y blanco que remitía a la portada original. El último tema, 'Wake Up / Your House', se presenta como un popurrí combinado en muchas ediciones.",
+    "reception": "Mixta. Parte de la crítica sintió que los arreglos íntimos y la voz más madura de Morissette agregaban una nueva dimensión; otros sintieron que las versiones suavizadas perdían la ira y el filo del original.",
     "sales": {
-      "figure": "Over 372,000 copies in the U.S. (as of 2010)",
+      "figure": "Más de 372.000 copias en EE. UU. (hacia 2010)",
       "source": "https://en.wikipedia.org/wiki/Jagged_Little_Pill_Acoustic"
     },
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -989,10 +989,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/28736-Alanis-Morissette-The-Collection",
-      "note": "Compilation artwork is copyrighted by Maverick Recording Company / Warner Records. Not freely licensed.",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa de la compilación protegido por derechos de autor de Maverick Recording Company / Warner Records. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "Morissette's sole greatest-hits compilation, spanning 1995 to 2005. It gathers her most celebrated singles alongside soundtrack selections and the new cover of Seal's 'Crazy', functioning as an overview of her post-Jagged Little Pill career.",
+    "description": "La única compilación de grandes éxitos de Morissette, que abarca de 1995 a 2005. Reúne sus sencillos más celebrados junto con selecciones de bandas de sonido y la nueva versión de 'Crazy' de Seal, funcionando como un panorama de su carrera posterior a Jagged Little Pill.",
     "tracks": [
       {
         "title": "Thank U",
@@ -1071,15 +1071,15 @@ const discografia = [
       "Various"
     ],
     "awards": [
-      "'Crazy' (cover of Seal) reached the Adult Top 40 and dance charts in the U.S.",
-      "Limited-edition DVD includes unreleased tracks 'King of Intimidation' and 'Can't Not'"
+      "'Crazy' (versión de Seal) llegó a las listas Adult Top 40 y de dance en EE. UU.",
+      "La edición limitada en DVD incluye los temas inéditos 'King of Intimidation' y 'Can't Not'"
     ],
-    "context": "Released November 15, 2005 on Maverick Records, compiling material from 1995 to 2005. The only new recording was a cover of Seal's 'Crazy', which became a modest radio and dance hit. A limited edition added a DVD with live footage and unreleased material from her 1996 tour.",
-    "reception": "Generally positive, with praise for the strength of the hits and the showcasing of deeper cuts, though some critics felt the soundtrack rarities and the Seal cover diluted the hit-heavy first half.",
+    "context": "Editado el 15 de noviembre de 2005 en Maverick Records, compilando material de 1995 a 2005. La única grabación nueva fue una versión de 'Crazy' de Seal, que se convirtió en un modesto éxito radial y de pistas de baile. Una edición limitada sumó un DVD con imágenes en vivo y material inédito de su gira de 1996.",
+    "reception": "En general positiva, con elogios para la fuerza de los éxitos y la exhibición de temas menos conocidos, aunque parte de la crítica sintió que las rarezas de bandas de sonido y la versión de Seal diluían la primera mitad, cargada de hits.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       },
       {
@@ -1097,10 +1097,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/27405-Alanis-Morissette-Flavors-Of-Entanglement",
-      "note": "Cover art is copyrighted by Maverick Recording Company / Warner Records. Not freely licensed.",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Maverick Recording Company / Warner Records. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "A darker, electronically textured record co-produced with Guy Sigsworth, channeling the heartbreak of Morissette's breakup into sweeping, cathartic pop. It balances fierce, machine-driven tracks with vulnerable ballads.",
+    "description": "Un disco más oscuro y de texturas electrónicas, coproducido con Guy Sigsworth, que canaliza el desamor de la ruptura de Morissette en un pop arrollador y catártico. Equilibra temas feroces y de base electrónica con baladas vulnerables.",
     "tracks": [
       {
         "title": "Citizen of the Planet",
@@ -1152,15 +1152,15 @@ const discografia = [
       "Alanis Morissette"
     ],
     "awards": [
-      "Debuted at No. 8 on the Billboard 200",
-      "Singles: 'Underneath', 'In Praise of the Vulnerable Man', 'Not as We'"
+      "Debutó en el número 8 del Billboard 200",
+      "Sencillos: 'Underneath', 'In Praise of the Vulnerable Man', 'Not as We'"
     ],
-    "context": "Released May 30, 2008 on Maverick Records. Morissette worked extensively with British producer Guy Sigsworth, and much of the album reflects her breakup with fiance Ryan Reynolds. A deluxe edition added five bonus tracks. She toured behind it in late 2008 and into 2009.",
-    "reception": "Generally favorable. Critics praised the adventurous electronic production and Morissette's willingness to confront grief, with 'Moratorium' and 'Not as We' singled out as highlights, though some felt it overreached.",
+    "context": "Editado el 30 de mayo de 2008 en Maverick Records. Morissette trabajó extensamente con el productor británico Guy Sigsworth, y gran parte del álbum refleja su ruptura con su entonces prometido, Ryan Reynolds. Una edición deluxe sumó cinco temas extra. Salió de gira con este disco a fines de 2008 y hasta bien entrado 2009.",
+    "reception": "En general favorable. La crítica elogió la producción electrónica audaz y la disposición de Morissette a enfrentar el duelo, con 'Moratorium' y 'Not as We' señalados como puntos altos, aunque algunos sintieron que el disco se excedía en ambición.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -1174,10 +1174,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/466456-Alanis-Morissette-Havoc-And-Bright-Lights",
-      "note": "Cover art is copyrighted by Sony Music Entertainment. Not freely licensed.",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Sony Music Entertainment. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "Morissette's first album for Sony, an up-tempo pop-rock collection reflecting themes of motherhood, spirituality, and personal relationships after a tour of change in her life. It reaffirmed her chart presence, reaching the top five in the U.S.",
+    "description": "El primer álbum de Morissette para Sony, una colección de pop-rock de ritmo animado que refleja temas de maternidad, espiritualidad y relaciones personales tras una etapa de cambios en su vida. Reafirmó su presencia en las listas, llegando al top cinco en EE. UU.",
     "tracks": [
       {
         "title": "Guardian",
@@ -1241,16 +1241,16 @@ const discografia = [
       "Alanis Morissette"
     ],
     "awards": [
-      "Debuted at No. 5 on the Billboard 200 (her sixth top-10 album in the U.S.)",
-      "Singles: 'Guardian', 'Lens', 'Receive'",
-      "Certifications in several European territories"
+      "Debutó en el número 5 del Billboard 200 (su sexto álbum entre los diez primeros en EE. UU.)",
+      "Sencillos: 'Guardian', 'Lens', 'Receive'",
+      "Certificaciones en varios países de Europa"
     ],
-    "context": "Released August 22, 2012 (Japan) and August 28, 2012 (U.S.) on Sony Music, marking a label move from Maverick/Warner. Morissette recorded in a home studio so she could care for her infant son, co-producing with Guy Sigsworth. The list above reflects the 14-track deluxe/expanded edition; the standard edition contains the first 12 tracks.",
-    "reception": "Mixed to positive. Reviewers noted a softer, calmer, more matronly collection compared with her early angst, praising the warmth and melody while some missed the bite of her earlier work.",
+    "context": "Editado el 22 de agosto de 2012 (Japón) y el 28 de agosto de 2012 (EE. UU.) en Sony Music, marcando su salida de Maverick/Warner. Morissette grabó en un estudio casero para poder cuidar a su hijo recién nacido, coproduciendo junto a Guy Sigsworth. La lista de arriba corresponde a la edición deluxe/ampliada de 14 temas; la edición estándar contiene los primeros 12.",
+    "reception": "Mixta a positiva. La crítica notó una colección más suave, tranquila y maternal comparada con su angustia temprana, elogiando la calidez y la melodía, aunque algunos extrañaron el filo de su trabajo anterior.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -1264,10 +1264,10 @@ const discografia = [
     "cover": null,
     "coverRef": {
       "src": "https://www.discogs.com/master/1778740-Alanis-Morissette-Such-Pretty-Forks-In-The-Road",
-      "note": "Cover art is copyrighted by Sony Music Entertainment / RCA / Crush Music. Not freely licensed.",
-      "legalAlternative": "Stream or purchase via official platforms; display the cover only through a licensed source or an editorial placeholder."
+      "note": "Arte de tapa protegido por derechos de autor de Sony Music Entertainment / RCA / Crush Music. No tiene licencia libre.",
+      "legalAlternative": "Escuchar o comprar en plataformas oficiales; mostrar la portada solo a través de una fuente con licencia o usar un placeholder editorial."
     },
-    "description": "Morissette's first studio album in eight years, a deeply personal and often quiet set balancing self-examination with healing. Co-written with Michael Farrell and produced by Alex Hope and Catherine Marks, it addresses anxiety, sobriety, and self-compassion.",
+    "description": "El primer álbum de estudio de Morissette en ocho años, un conjunto profundamente personal y a menudo sereno que equilibra la introspección con la sanación. Coescrito con Michael Farrell y producido por Alex Hope y Catherine Marks, aborda la ansiedad, la sobriedad y la autocompasión.",
     "tracks": [
       {
         "title": "Smiling",
@@ -1319,14 +1319,14 @@ const discografia = [
       "Catherine Marks"
     ],
     "awards": [
-      "Singles: 'Smiling' and 'Reasons I Drink'"
+      "Sencillos: 'Smiling' y 'Reasons I Drink'"
     ],
-    "context": "Released July 31, 2020 on Sony Music/RCA/Crush Music. Originally planned for May 1, 2020, it was postponed due to the COVID-19 pandemic. Following her long-discussed breakup and struggles in the 2010s, the songs were written with longtime collaborator Michael Farrell and recorded in London and Los Angeles.",
-    "reception": "Favorable. Critics praised her still-strong voice and the mature, self-aware writing, highlighting 'Ablaze' and 'Smiling', though some found the midtempo consistency less immediate than her classic material.",
+    "context": "Editado el 31 de julio de 2020 en Sony Music/RCA/Crush Music. Originalmente previsto para el 1 de mayo de 2020, se postergó por la pandemia de COVID-19. Tras su ruptura, largamente comentada, y las dificultades que atravesó en la década de 2010, las canciones se escribieron junto a su colaborador de siempre, Michael Farrell, y se grabaron en Londres y Los Ángeles.",
+    "reception": "Favorable. La crítica elogió su voz, aún potente, y la escritura madura y consciente de sí misma, destacando 'Ablaze' y 'Smiling', aunque algunos encontraron la consistencia de tempo medio menos inmediata que su material clásico.",
     "sales": null,
     "officialLinks": [
       {
-        "label": "Official website",
+        "label": "Sitio oficial",
         "url": "https://alanis.com/"
       }
     ],
@@ -1334,32 +1334,32 @@ const discografia = [
   }
 ];
 
-const timeline = {
+export const timeline = {
   "eras": [
     {
       "era": "1970s",
-      "label": "Roots in Ottawa",
+      "label": "Raíces en Ottawa",
       "color": "#7A8B99",
-      "summary": "Alanis Nadine Morissette is born in Ottawa, Ontario, into a family of teachers. Her parents' work takes the young family to Germany for a few years before they return to Canada, planting the roots of a musical childhood.",
+      "summary": "Alanis Nadine Morissette nace en Ottawa, Ontario, en una familia de docentes. El trabajo de sus padres lleva a la joven familia a Alemania durante unos años antes de volver a Canadá, sembrando las raíces de una infancia musical.",
       "items": [
         {
           "year": "June 1, 1974",
-          "title": "Born in Ottawa, Ontario",
-          "description": "Alanis Nadine Morissette is born at Riverside Hospital in Ottawa, near-identical twin of Wade (born 12 minutes earlier) and younger sister of Chad. Her father is of French and Irish descent and her mother is Hungarian.",
+          "title": "Nace en Ottawa, Ontario",
+          "description": "Alanis Nadine Morissette nace en el Riverside Hospital de Ottawa, gemela casi idéntica de Wade (nacido 12 minutos antes) y hermana menor de Chad. Su padre es de ascendencia francesa e irlandesa, y su madre es húngara.",
           "type": "life",
           "source": "https://en.wikipedia.org/wiki/Alanis_Morissette"
         },
         {
           "year": "1977–1980",
-          "title": "Family moves to Lahr, Germany",
-          "description": "Both parents teach at a military-base school, so the Morissettes relocate to Lahr, Germany, before returning to Ottawa.",
+          "title": "La familia se muda a Lahr, Alemania",
+          "description": "Ambos padres enseñan en una escuela de una base militar, así que los Morissette se mudan a Lahr, Alemania, antes de volver a Ottawa.",
           "type": "life",
           "source": "https://alanis-m.com/alanis-morissette/biography/"
         },
         {
           "year": "1980",
-          "title": "Back in Ottawa — piano and dance",
-          "description": "Returning to Ottawa, Alanis begins playing piano at six and composing at seven, writing her first song at nine and later taking dance lessons.",
+          "title": "De vuelta en Ottawa — piano y danza",
+          "description": "De regreso en Ottawa, Alanis empieza a tocar piano a los seis años y a componer a los siete, escribe su primera canción a los nueve y más tarde toma clases de danza.",
           "type": "life",
           "source": "https://www.britannica.com/biography/Alanis-Morissette"
         }
@@ -1367,28 +1367,28 @@ const timeline = {
     },
     {
       "era": "1980s",
-      "label": "The Early Years",
+      "label": "Los primeros años",
       "color": "#B98A5E",
-      "summary": "A child performer on national television, Morissette uses her TV earnings to cut her first record. By her teens she signs a publishing deal and records an electro-pop single, foreshadowing the career to come.",
+      "summary": "Como intérprete infantil en la televisión nacional, Morissette usa lo que gana en TV para grabar su primer disco. En la adolescencia firma un contrato editorial y graba un sencillo electro-pop, anticipando la carrera que vendrá.",
       "items": [
         {
           "year": "1984–1986",
-          "title": "Child actor on 'You Can't Do That on Television'",
-          "description": "At around age ten, Morissette appears on the Nickelodeon children's series \"You Can't Do That on Television,\" using her earnings to record her first single.",
+          "title": "Actriz infantil en 'You Can't Do That on Television'",
+          "description": "Alrededor de los diez años, Morissette aparece en la serie infantil de Nickelodeon \"You Can't Do That on Television\", y usa lo que gana para grabar su primer sencillo.",
           "type": "life",
           "source": "https://www.britannica.com/biography/Alanis-Morissette"
         },
         {
           "year": "1986",
-          "title": "Writes her first single-eligible songs",
-          "description": "Morissette composes songs in her mid-teens, and by age 14 she signs a song-publishing deal in Canada.",
+          "title": "Escribe sus primeras canciones",
+          "description": "Morissette compone canciones a mediados de su adolescencia, y a los 14 años firma un contrato editorial de canciones en Canadá.",
           "type": "life",
           "source": "https://www.britannica.com/biography/Alanis-Morissette"
         },
         {
           "year": "1987",
-          "title": "First recording: 'Fate Stay With Me'",
-          "description": "Her first single, the electro-pop \"Fate Stay With Me,\" is released as an indie single in her teens — the very beginning of her recorded career.",
+          "title": "Primera grabación: 'Fate Stay With Me'",
+          "description": "Su primer sencillo, el electro-pop \"Fate Stay With Me\", se edita de forma independiente cuando aún es adolescente: el verdadero comienzo de su carrera discográfica.",
           "type": "song",
           "source": "https://www.cshf.ca/songwriter/alanis-morissette"
         }
@@ -1396,112 +1396,112 @@ const timeline = {
     },
     {
       "era": "1990s",
-      "label": "Dance-Pop to Global Rock Stardom",
+      "label": "Del dance-pop al estrellato global del rock",
       "color": "#C05746",
-      "summary": "The defining decade. Morissette is a Canadian teen dance-pop star, reinvents herself in Los Angeles, and with 'Jagged Little Pill' becomes one of the biggest and most influential musical artists of the 1990s.",
+      "summary": "La década definitoria. Morissette es una estrella canadiense de dance-pop adolescente, se reinventa en Los Ángeles y, con 'Jagged Little Pill', se convierte en una de las artistas musicales más grandes e influyentes de los años 90.",
       "items": [
         {
           "year": "1991",
-          "title": "Debut album 'Alanis' released in Canada",
-          "description": "Her self-titled debut, a dance-pop record on MCA Records Canada, goes platinum and makes her a teen star nicknamed the \"Debbie Gibson of Canada.\"",
+          "title": "Sale en Canadá el álbum debut 'Alanis'",
+          "description": "Su debut homónimo, un disco de dance-pop en MCA Records Canada, llega a platino y la convierte en una estrella adolescente apodada la \"Debbie Gibson de Canadá\".",
           "type": "album",
           "source": "https://en.wikipedia.org/wiki/Alanis_Morissette_discography"
         },
         {
           "year": "1991",
-          "title": "Single 'Too Hot' becomes a top-20 hit",
-          "description": "The singles \"Too Hot,\" \"Walk Away\" and \"Feel Your Love\" carry the debut; she even opens concerts for Vanilla Ice.",
+          "title": "El sencillo 'Too Hot' se convierte en un éxito top 20",
+          "description": "Los sencillos \"Too Hot\", \"Walk Away\" y \"Feel Your Love\" sostienen el debut; incluso llega a telonear a Vanilla Ice.",
           "type": "song",
           "source": "https://top40weekly.com/alanis-morissette"
         },
         {
           "year": "1992",
-          "title": "'Now Is the Time' + first Juno Award",
-          "description": "The ballad-driven second album is certified gold in Canada. At age 17 she wins her first Juno, Most Promising Female Vocalist, for \"Too Hot.\"",
+          "title": "'Now Is the Time' + primer premio Juno",
+          "description": "El segundo álbum, orientado a las baladas, se certifica oro en Canadá. A los 17 años gana su primer Juno, Vocalista Femenina Más Prometedora, por \"Too Hot\".",
           "type": "album",
           "source": "https://carasonline.ca/wp-content/uploads/2015/02/2015-CMHF-Announcement.pdf"
         },
         {
           "year": "1993–1994",
-          "title": "Moves to Toronto, then Los Angeles",
-          "description": "Unhappy with her teen-pop image, Morissette relocates to Toronto and then to Los Angeles, determined to reinvent herself as a songwriter.",
+          "title": "Se muda a Toronto y luego a Los Ángeles",
+          "description": "Descontenta con su imagen de teen-pop, Morissette se muda a Toronto y luego a Los Ángeles, decidida a reinventarse como compositora.",
           "type": "life",
           "source": "https://en.wikipedia.org/wiki/You_Oughta_Know"
         },
         {
           "year": "1994",
-          "title": "Meets Glen Ballard",
-          "description": "In Los Angeles she meets producer-songwriter Glen Ballard; their immediate creative chemistry sparks the sessions that become \"Jagged Little Pill.\"",
+          "title": "Conoce a Glen Ballard",
+          "description": "En Los Ángeles conoce al productor y compositor Glen Ballard; la química creativa inmediata entre ambos enciende las sesiones que darán origen a \"Jagged Little Pill\".",
           "type": "hito",
           "source": "https://en.wikipedia.org/wiki/Jagged_Little_Pill"
         },
         {
           "year": "June 13, 1995",
-          "title": "'Jagged Little Pill' released",
-          "description": "Her first international album, released through Maverick/Reprise, becomes a global phenomenon with raw, confessional alt-rock.",
+          "title": "Sale 'Jagged Little Pill'",
+          "description": "Su primer álbum internacional, editado a través de Maverick/Reprise, se convierte en un fenómeno mundial gracias a un rock alternativo crudo y confesional.",
           "type": "album",
           "source": "https://en.wikipedia.org/wiki/Jagged_Little_Pill"
         },
         {
           "year": "July 6, 1995",
-          "title": "'You Oughta Know' released as lead single",
-          "description": "The furious lead single, with Flea and Dave Navarro of the Red Hot Chili Peppers, catapults her to fame after KROQ spins it relentlessly.",
+          "title": "'You Oughta Know' sale como sencillo principal",
+          "description": "El furioso sencillo principal, con Flea y Dave Navarro de los Red Hot Chili Peppers, la catapulta a la fama después de que KROQ lo pase sin parar.",
           "type": "song",
           "source": "https://alanis-m.com/discography/jagged-little-pill/"
         },
         {
           "year": "1995",
-          "title": "Signs with Madonna's Maverick Records",
-          "description": "Maverick releases \"Jagged Little Pill\" and backs her international rollout, introducing her to a worldwide audience.",
+          "title": "Firma con Maverick Records, el sello de Madonna",
+          "description": "Maverick edita \"Jagged Little Pill\" y respalda su despliegue internacional, presentándola ante una audiencia global.",
           "type": "hito",
           "source": "https://www.cshf.ca/songwriter/alanis-morissette"
         },
         {
           "year": "February 1996",
-          "title": "Four Grammy Awards in one night",
-          "description": "At age 21, she wins Album of the Year and Best Rock Album for \"Jagged Little Pill\" plus Best Rock Song and Best Female Rock Vocal Performance for \"You Oughta Know.\"",
+          "title": "Cuatro premios Grammy en una noche",
+          "description": "A los 21 años, gana Álbum del Año y Mejor Álbum de Rock por \"Jagged Little Pill\", además de Mejor Canción de Rock y Mejor Interpretación Vocal de Rock Femenina por \"You Oughta Know\".",
           "type": "award",
           "source": "https://www.grammy.com/artists/alanis-morissette/4915"
         },
         {
           "year": "March 8, 1996",
-          "title": "'Alanis Morissette Day' in Ottawa",
-          "description": "The Mayor of Ottawa declares March 8, 1996 \"Alanis Morissette Day\" in her hometown, where the album had gone 2× Diamond.",
+          "title": "'Día de Alanis Morissette' en Ottawa",
+          "description": "El intendente de Ottawa declara el 8 de marzo de 1996 \"Día de Alanis Morissette\" en su ciudad natal, donde el álbum ya había llegado a 2 veces Diamante.",
           "type": "hito",
           "source": "https://superstarsbio.com/bios/alanis-morissette"
         },
         {
           "year": "1996",
-          "title": "Three MTV Video Music Awards for 'Ironic'",
-          "description": "'Ironic' wins Best New Artist, Best Female Video and Best Editing at the 1996 VMAs.",
+          "title": "Tres MTV Video Music Awards por 'Ironic'",
+          "description": "'Ironic' gana Mejor Artista Nuevo, Mejor Video Femenino y Mejor Edición en los VMA de 1996.",
           "type": "award",
           "source": "https://en.wikipedia.org/wiki/List_of_awards_and_nominations_received_by_Alanis_Morissette"
         },
         {
           "year": "1996",
-          "title": "Best-selling album of the year worldwide",
-          "description": "'Jagged Little Pill' sells roughly 18.7 million copies in 1996, making it the best-selling album of the year anywhere on the planet.",
+          "title": "Álbum más vendido del año en el mundo",
+          "description": "'Jagged Little Pill' vende cerca de 18,7 millones de copias en 1996, lo que lo convierte en el álbum más vendido del año en todo el planeta.",
           "type": "album",
           "source": "https://alanis-m.com/discography/jagged-little-pill/"
         },
         {
           "year": "1998",
-          "title": "'Uninvited' hits from the City of Angels soundtrack",
-          "description": "The brooding \"Uninvited\" becomes a Grammy-winning hit and signals her spiritual, melodic turn.",
+          "title": "'Uninvited' suena en la banda de sonido de City of Angels",
+          "description": "La tenebrosa \"Uninvited\" se convierte en un éxito ganador del Grammy y marca su giro espiritual y melódico.",
           "type": "song",
           "source": "https://www.grammy.com/artists/alanis-morissette/4915"
         },
         {
           "year": "November 3, 1998",
-          "title": "'Supposed Former Infatuation Junkie' released",
-          "description": "The follow-up debuts at No. 1 on the Billboard 200, breaking the record for first-week sales by a female artist.",
+          "title": "Sale 'Supposed Former Infatuation Junkie'",
+          "description": "El siguiente disco debuta en el número 1 del Billboard 200, batiendo el récord de ventas en la primera semana para una artista mujer.",
           "type": "album",
           "source": "https://alanis-m.com/discography/supposed-former-infatuation-junkie/"
         },
         {
           "year": "1999",
-          "title": "Two Grammys for 'Uninvited' + 'MTV Unplugged'",
-          "description": "She wins Best Rock Song and Best Female Rock Vocal Performance for \"Uninvited\" (41st Grammys) and releases \"MTV Unplugged.\"",
+          "title": "Dos Grammy por 'Uninvited' + 'MTV Unplugged'",
+          "description": "Gana Mejor Canción de Rock y Mejor Interpretación Vocal de Rock Femenina por \"Uninvited\" (41.ª edición de los Grammy) y edita \"MTV Unplugged\".",
           "type": "award",
           "source": "https://www.grammy.com/artists/alanis-morissette/4915"
         }
@@ -1509,49 +1509,49 @@ const timeline = {
     },
     {
       "era": "2000s",
-      "label": "Evolution and Reinvention",
+      "label": "Evolución y reinvención",
       "color": "#6B8E5A",
-      "summary": "Morissette takes creative control, producing her own records, branching into acoustic re-recordings and greatest-hits, and becoming a U.S. citizen while continuing to tour worldwide.",
+      "summary": "Morissette toma el control creativo, produce sus propios discos, se anima a las regrabaciones acústicas y a un álbum de grandes éxitos, y se convierte en ciudadana estadounidense mientras sigue de gira por el mundo.",
       "items": [
         {
           "year": "February 26, 2002",
-          "title": "'Under Rug Swept' released — first fully self-produced record",
-          "description": "Writing and producing the entire album herself, she debuts at No. 1 in 12 countries, powered by the hit \"Hands Clean.\"",
+          "title": "Sale 'Under Rug Swept' — su primer disco totalmente autoproducido",
+          "description": "Escribiendo y produciendo el álbum entero ella misma, debuta en el número 1 en 12 países, impulsada por el éxito \"Hands Clean\".",
           "type": "album",
           "source": "https://en.wikipedia.org/wiki/Alanis_Morissette_discography"
         },
         {
           "year": "2003",
-          "title": "Juno for Jack Richardson Producer of the Year",
-          "description": "She wins the Juno for Jack Richardson Producer of the Year for her work on \"Under Rug Swept.\"",
+          "title": "Juno al Productor del Año Jack Richardson",
+          "description": "Gana el Juno al Productor del Año Jack Richardson por su trabajo en \"Under Rug Swept\".",
           "type": "award",
           "source": "https://junoawards.ca/artist-profile/alanis-morissette"
         },
         {
           "year": "May 18, 2004",
-          "title": "'So-Called Chaos' released",
-          "description": "Working with producer John Shanks, the album is a more straightforward pop-rock set and debuts in the Billboard 200 top five.",
+          "title": "Sale 'So-Called Chaos'",
+          "description": "Trabajando con el productor John Shanks, el álbum es un conjunto de pop-rock más directo y debuta entre los cinco primeros del Billboard 200.",
           "type": "album",
           "source": "https://en.wikipedia.org/wiki/Alanis_Morissette_discography"
         },
         {
           "year": "2005",
           "title": "'The Collection' + 'Jagged Little Pill Acoustic'",
-          "description": "She issues her first greatest-hits compilation and a fully acoustic re-recording of \"Jagged Little Pill\" to mark its 10th anniversary.",
+          "description": "Edita su primera compilación de grandes éxitos y una regrabación totalmente acústica de \"Jagged Little Pill\" para celebrar su 10.º aniversario.",
           "type": "album",
           "source": "https://en.wikipedia.org/wiki/Alanis_Morissette_discography"
         },
         {
           "year": "2005",
-          "title": "Becomes a U.S. citizen",
-          "description": "Morissette gains U.S. citizenship, becoming a dual Canadian-American citizen; she is also inducted into Canada's Walk of Fame.",
+          "title": "Se convierte en ciudadana estadounidense",
+          "description": "Morissette obtiene la ciudadanía estadounidense, sumando la doble nacionalidad canadiense-estadounidense; ese mismo año ingresa también al Paseo de la Fama de Canadá.",
           "type": "hito",
           "source": "https://en.wikipedia.org/wiki/Alanis_Morissette"
         },
         {
           "year": "June 10, 2008",
-          "title": "'Flavors of Entanglement' released",
-          "description": "Co-produced largely with Guy Sigsworth, the record incorporates electronica and ambient textures; it wins the Juno for Pop Album of the Year in 2009.",
+          "title": "Sale 'Flavors of Entanglement'",
+          "description": "Coproducido en gran parte con Guy Sigsworth, el disco incorpora texturas de electrónica y ambient; gana el Juno al Álbum Pop del Año en 2009.",
           "type": "album",
           "source": "https://en.wikipedia.org/wiki/Alanis_Morissette_discography"
         }
@@ -1559,70 +1559,70 @@ const timeline = {
     },
     {
       "era": "2010s",
-      "label": "A New Chapter: Family and Broadway",
+      "label": "Un nuevo capítulo: familia y Broadway",
       "color": "#8A6FA8",
-      "summary": "A new era in her personal life accompanies a quieter recording phase: she marries, becomes a mother, returns to songwriting with a spiritual pop record, and — critically — sees her catalog reborn as a Tony-nominated Broadway musical.",
+      "summary": "Una nueva etapa en su vida personal acompaña una fase de grabación más tranquila: se casa, se convierte en madre, vuelve a componer con un disco pop espiritual y, de manera crucial, ve renacer su catálogo en un musical de Broadway nominado al Tony.",
       "items": [
         {
           "year": "May 22, 2010",
-          "title": "Marries Mario 'Souleye' Treadway",
-          "description": "Morissette marries hip-hop artist Souleye in a private ceremony at their Los Angeles home.",
+          "title": "Se casa con Mario 'Souleye' Treadway",
+          "description": "Morissette se casa con el artista de hip-hop Souleye en una ceremonia privada en su casa de Los Ángeles.",
           "type": "life",
           "source": "https://www.bbc.co.uk/news/10261921"
         },
         {
           "year": "December 25, 2010",
-          "title": "Son Ever Imre born",
-          "description": "The couple welcome their first child, son Ever Imre Morissette-Treadway; she becomes a vocal advocate of attachment parenting and unschooling.",
+          "title": "Nace su hijo Ever Imre",
+          "description": "La pareja recibe a su primer hijo, Ever Imre Morissette-Treadway; ella se convierte en una defensora vocal de la crianza con apego y el 'unschooling'.",
           "type": "life",
           "source": "https://people.com/all-about-alanis-morissette-kids-8422192"
         },
         {
           "year": "August 28, 2012",
-          "title": "'Havoc and Bright Lights' released",
-          "description": "Her seventh studio album leans into warmer, more spiritual and personal songwriting as she navigates motherhood.",
+          "title": "Sale 'Havoc and Bright Lights'",
+          "description": "Su séptimo álbum de estudio se vuelca hacia una composición más cálida, espiritual y personal mientras atraviesa la maternidad.",
           "type": "album",
           "source": "https://en.wikipedia.org/wiki/Alanis_Morissette_discography"
         },
         {
           "year": "March 15, 2015",
-          "title": "Inducted into the Canadian Music Hall of Fame",
-          "description": "Honored at the 44th Juno Awards in Hamilton, Ontario, for a career that \"forged a new path for women in music.\"",
+          "title": "Ingresa al Salón de la Fama de la Música Canadiense",
+          "description": "Es homenajeada en la 44.ª edición de los Juno Awards en Hamilton, Ontario, por una carrera que \"abrió un nuevo camino para las mujeres en la música\".",
           "type": "award",
           "source": "https://canadianmusichalloffame.ca/inductee/alanis-morissette/"
         },
         {
           "year": "June 23, 2016",
-          "title": "Daughter Onyx Solace born",
-          "description": "Morissette welcomes her second child, daughter Onyx Solace Morissette-Treadway.",
+          "title": "Nace su hija Onyx Solace",
+          "description": "Morissette recibe a su segunda hija, Onyx Solace Morissette-Treadway.",
           "type": "life",
           "source": "https://www.hellomagazine.com/healthandbeauty/mother-and-baby/842913/inside-alanis-morissette-private-family-life-with-three-children/"
         },
         {
           "year": "May 2018",
-          "title": "'Jagged Little Pill' musical premieres",
-          "description": "The stage musical, with a book by Diablo Cody and directed by Diane Paulus, premieres at the American Repertory Theater in Cambridge, Massachusetts, to sold-out runs.",
+          "title": "Se estrena el musical 'Jagged Little Pill'",
+          "description": "El musical de teatro, con libreto de Diablo Cody y dirigido por Diane Paulus, se estrena en el American Repertory Theater de Cambridge, Massachusetts, con funciones agotadas.",
           "type": "hito",
           "source": "https://en.wikipedia.org/wiki/Jagged_Little_Pill_(musical)"
         },
         {
           "year": "August 8, 2019",
-          "title": "Son Winter Mercy born",
-          "description": "Her third child, son Winter Mercy Morissette-Treadway, is born while she continues to tour and promote the musical.",
+          "title": "Nace su hijo Winter Mercy",
+          "description": "Su tercer hijo, Winter Mercy Morissette-Treadway, nace mientras ella continúa de gira promocionando el musical.",
           "type": "life",
           "source": "https://www.hellomagazine.com/healthandbeauty/mother-and-baby/842913/inside-alanis-morissette-private-family-life-with-three-children/"
         },
         {
           "year": "December 5, 2019",
-          "title": "'Jagged Little Pill' opens on Broadway",
-          "description": "The musical opens at the Broadhurst Theatre; it will earn a season-leading 15 Tony nominations (winning Best Book of a Musical and Best Featured Actress) and a Grammy for Best Musical Theater Album.",
+          "title": "'Jagged Little Pill' se estrena en Broadway",
+          "description": "El musical abre en el Broadhurst Theatre; obtendrá 15 nominaciones al Tony, la cifra más alta de la temporada (ganando Mejor Libreto de un Musical y Mejor Actriz de Reparto) y un Grammy al Mejor Álbum de Teatro Musical.",
           "type": "hito",
           "source": "https://www.shubert.nyc/press/jagged-little-pill-to-open-on-broadway-this-fall/"
         },
         {
           "year": "December 12, 2019",
-          "title": "Billboard Women in Music Icon Award",
-          "description": "Morissette receives the 2019 Icon Award in Los Angeles, presented by the Foo Fighters' Taylor Hawkins.",
+          "title": "Premio Icon de Billboard Women in Music",
+          "description": "Morissette recibe el premio Icon 2019 en Los Ángeles, entregado por Taylor Hawkins, de Foo Fighters.",
           "type": "award",
           "source": "https://www.billboard.com/music/awards/alanis-morissette-women-in-music-2019-8546215/"
         }
@@ -1630,77 +1630,77 @@ const timeline = {
     },
     {
       "era": "2020s",
-      "label": "Legacy, Activism and a New Sound",
+      "label": "Legado, activismo y un nuevo sonido",
       "color": "#3B7A8A",
-      "summary": "Morissette returns to confessional songwriting, pivots into ambient meditation music, and becomes an outspoken advocate for mental and women's health. Her catalog lives on through the musical and she remains a major live draw.",
+      "summary": "Morissette vuelve a la escritura confesional, se vuelca a la música ambiental de meditación y se convierte en una voz destacada a favor de la salud mental y la salud de las mujeres. Su catálogo sigue vivo a través del musical y ella continúa siendo una gran convocante en vivo.",
       "items": [
         {
           "year": "July 31, 2020",
-          "title": "'Such Pretty Forks in the Road' released",
-          "description": "Her first album in eight years (originally set for May 1, then postponed by the pandemic) tackles mental health, addiction, and the pressures on women.",
+          "title": "Sale 'Such Pretty Forks in the Road'",
+          "description": "Su primer álbum en ocho años (previsto originalmente para el 1 de mayo y postergado por la pandemia) aborda la salud mental, las adicciones y las presiones sobre las mujeres.",
           "type": "album",
           "source": "https://alanis-m.com/discography/such-pretty-forks-in-the-road/"
         },
         {
           "year": "March 14, 2021",
-          "title": "Grammy for Best Musical Theater Album",
-          "description": "The \"Jagged Little Pill\" original Broadway cast recording wins the Grammy for Best Musical Theater Album.",
+          "title": "Grammy al Mejor Álbum de Teatro Musical",
+          "description": "La grabación del elenco original de Broadway de \"Jagged Little Pill\" gana el Grammy al Mejor Álbum de Teatro Musical.",
           "type": "award",
           "source": "https://www.grammy.com/news/jagged-little-pill-wins-best-musical-theater-album-2021-grammy-awards-show"
         },
         {
           "year": "December 17, 2021",
-          "title": "'Jagged Little Pill' closes on Broadway",
-          "description": "After a pandemic suspension and a short reopening, the show closes on Broadway having won two Tony Awards and a Grammy.",
+          "title": "'Jagged Little Pill' cierra en Broadway",
+          "description": "Tras una suspensión por la pandemia y una breve reapertura, el show cierra en Broadway habiendo ganado dos premios Tony y un Grammy.",
           "type": "hito",
           "source": "https://en.wikipedia.org/wiki/Jagged_Little_Pill_(musical)"
         },
         {
           "year": "June 17, 2022",
-          "title": "'The Storm Before the Calm' — a meditation album",
-          "description": "Her tenth studio album is an ambient, guided-meditation record co-written with Darkside's Dave Harrington and hosted on the Calm app.",
+          "title": "'The Storm Before the Calm' — un álbum de meditación",
+          "description": "Su décimo álbum de estudio es un disco ambiental de meditación guiada, coescrito con Dave Harrington de Darkside y alojado en la aplicación Calm.",
           "type": "album",
           "source": "https://www.allmusic.com/album/the-storm-before-the-calm-mw0003739475"
         },
         {
           "year": "September 24, 2022",
-          "title": "Inducted into the Canadian Songwriters Hall of Fame",
-          "description": "Presented her award at Massey Hall by Olivia Rodrigo, who credited \"Jagged Little Pill\" with changing how she saw songwriting.",
+          "title": "Ingresa al Salón de la Fama de los Compositores Canadienses",
+          "description": "Recibió su premio en el Massey Hall de manos de Olivia Rodrigo, quien le atribuyó a \"Jagged Little Pill\" haber cambiado su forma de ver la composición.",
           "type": "award",
           "source": "https://www.cshf.ca/2022-gala-induction-alanis-morissette"
         },
         {
           "year": "2023",
-          "title": "'Last Christmas' single + 'Jagged Little Pill: The Novel'",
-          "description": "She releases a holiday single and, with Diablo Cody and Glen Ballard, publishes the musical's novel adaptation (October 2023).",
+          "title": "Sencillo 'Last Christmas' + 'Jagged Little Pill: The Novel'",
+          "description": "Edita un sencillo navideño y, junto a Diablo Cody y Glen Ballard, publica la adaptación en novela del musical (octubre de 2023).",
           "type": "song",
           "source": "https://en.wikipedia.org/wiki/The_Storm_Before_the_Calm"
         },
         {
           "year": "September 7, 2024",
-          "title": "Billboard Canada Women in Music Icon Award",
-          "description": "She is honored as Icon at the inaugural Billboard Canada Women in Music event.",
+          "title": "Premio Icon de Billboard Canada Women in Music",
+          "description": "Es homenajeada como Icon en la primera edición del evento Billboard Canada Women in Music.",
           "type": "award",
           "source": "https://ca.billboard.com/music/music-news/alanis-morissette-billboard-canada-women-in-music"
         },
         {
           "year": "June 27, 2025",
-          "title": "Glastonbury debut on the Pyramid Stage",
-          "description": "Morissette headlines the iconic festival for the first time, playing a career-spanning set she called a bucket-list moment.",
+          "title": "Debut en Glastonbury, en el Pyramid Stage",
+          "description": "Morissette encabeza el icónico festival por primera vez, con un show que recorre toda su carrera y que ella calificó como un sueño cumplido.",
           "type": "tour",
           "source": "https://www.setlist.fm/setlist/alanis-morissette/2025/worthy-farm-pilton-england-535b6779.html"
         },
         {
           "year": "October–November 2025",
-          "title": "Las Vegas residency at Caesars Palace",
-          "description": "She mounts a residency at the Colosseum at Caesars Palace, performing catalog highlights for a series of shows.",
+          "title": "Residencia en Las Vegas, en Caesars Palace",
+          "description": "Monta una residencia en el Colosseum de Caesars Palace, con lo más destacado de su catálogo a lo largo de una serie de shows.",
           "type": "tour",
           "source": "https://www.ticketmaster.com/alanis-morissette-tickets/artist/775998"
         },
         {
           "year": "2026",
-          "title": "Touring and the LA residency 'Butterfly with a Machete'",
-          "description": "She continues touring internationally and announces a Los Angeles residency; her song \"Lens\" features in current set lists. She also debuts a wellness conversation platform, \"The Deeply.\"",
+          "title": "De gira y con la residencia en LA 'Butterfly with a Machete'",
+          "description": "Continúa de gira internacionalmente y anuncia una residencia en Los Ángeles; su canción \"Lens\" figura en los setlists actuales. También estrena una plataforma de conversaciones sobre bienestar, \"The Deeply\".",
           "type": "tour",
           "source": "https://concerts50.com/artists/alanis-morissette-tour-dates"
         }
@@ -1709,8 +1709,8 @@ const timeline = {
   ]
 };
 
-const argentina = {
-  "intro": "Alanis Morissette tiene una relación especial y duradera con la Argentina. Llegó por primera vez en 1996, en plena explosión mundial de 'Jagged Little Pill', cuando tocó dos noches en el Estadio Obras Sanitarias con apenas 22 años. El vínculo se reafirmó en los años de 'Supposed Former Infatuation Junkie' (1998-1999) y se selló definitivamente con sus conciertos convertidos en acontecimiento en el Luna Park (2009) y su regreso como cabeza de cartel en Lollapalooza Argentina 2025, celebrando los 30 años de su disco debut. Los medios argentinos — La Nación, Página/12, Ciudad Magazine, Infobae — la trataron siempre como una artista de culto: una intérprete que creció a la vista de sus fans locales entre llenos totales, entradas truchas y aquel show de 1999 al que, según la crónica de Página/12, apenas concurrió media sala. Otras estrellas pasan por Buenos Aires de gira; Alanis dejó una huella que la prensa describe como un regreso esperado 'diez años' o 'quince años', señal de que el público argentino nunca la dejó ir.",
+export const argentina = {
+  "intro": "Alanis Morissette tiene una relación especial y duradera con la Argentina. Llegó por primera vez en 1996, en plena explosión mundial de 'Jagged Little Pill', cuando tocó dos noches en el Estadio Obras Sanitarias con apenas 22 años. El vínculo se reafirmó en los años de 'Supposed Former Infatuation Junkie' (1998-1999) y se selló definitivamente con sus conciertos convertidos en acontecimiento en el Luna Park (2009) y su regreso como cabeza de cartel en Lollapalooza Argentina 2025, celebrando los 30 años de 'Jagged Little Pill', su debut internacional. Los medios argentinos — La Nación, Página/12, Ciudad Magazine, Infobae — la trataron siempre como una artista de culto: una intérprete que creció a la vista de sus fans locales entre llenos totales, entradas truchas y aquel show de 1999 al que, según la crónica de Página/12, apenas concurrió media sala. Otras estrellas pasan por Buenos Aires de gira; Alanis dejó una huella que la prensa describe como un regreso esperado 'diez años' o 'quince años', señal de que el público argentino nunca la dejó ir.",
   "visits": [
     {
       "year": 1996,
@@ -1790,6 +1790,15 @@ const argentina = {
         "Thank U"
       ],
       "setlistVerified": false,
+      "confirmedSongs": [
+        "Baba",
+        "Hand in My Pocket",
+        "You Oughta Know",
+        "Uninvited",
+        "Thank U",
+        "Mary Jane",
+        "Ironic"
+      ],
       "context": "Alanis volvió a Buenos Aires para promocionar su cuarto disco, 'Supposed Former Infatuation Junkie', recién editado. Según Página/12 (Suplemento NO, 26/11/1998) tocó el viernes por la tarde en la inauguración del nuevo local de Tower Records y el sábado al mediodía en el Hard Rock Café, en una función para el programa 'Quién te dijo que hay una fiesta' de la radio Rock & Pop (confirmado también por La Nación, 20/11/1998). La artista llegó en pleno vuelco espiritual: con trencitas y remera con la efigie de Buda, entre inciensos y velas, un perfil muy distinto al de la furia de 1995.",
       "reception": "Página/12 describió el nuevo perfil como 'paz budista bastante aburrida' pero destacó que los fans la siguen amando y que en el show 'nadie le pidió que insultara otra vez a su ex novio cantando You Oughta Know'. En el repertorio no faltaron hits como 'Ironic' y temas nuevos como 'Thank U' y 'So Pure'.",
       "photos": [],
@@ -1823,34 +1832,30 @@ const argentina = {
       "venue": "Estadio Luna Park (Corrientes y Bajo)",
       "setlist": [
         "Baba",
-        "Would Not Come",
-        "Joining You",
+        "All I Really Want",
         "Hand in My Pocket",
+        "Would Not Come",
         "Are You Still Mad",
         "Sympathetic Character",
-        "Perfect",
+        "That I Would Be Good",
         "You Learn",
         "Forgiven",
-        "I Was Hoping",
+        "These R the Thoughts",
         "So Pure",
-        "That I Would Be Good",
-        "All I Really Want",
         "You Oughta Know",
         "Uninvited",
         "Thank U",
-        "Ironic",
-        "Unsent",
-        "Heart of the House",
-        "UR"
+        "Mary Jane",
+        "Ironic"
       ],
-      "setlistVerified": false,
-      "context": "Dos noches en el Luna Park dentro del tramo sudamericano del Junkie Tour, tras pasar por México, Puerto Rico, Caracas (Poliedro) y Montevideo (Velódromo Municipal). La cronología está confirmada por la propia lista de gira archivada en alanis.com (noviembre 1999) y por el artículo de Página/12 del 24/11/1999. Alanis venía de su viaje a la India, que inspiró canciones del disco, y poco antes de estos shows había estrenado el videoclip de 'Thank U' con imágenes suyas desnuda — que la prensa porteña asoció al ajuste de perfil de su personaje.",
+      "setlistVerified": true,
+      "context": "Dos noches en el Luna Park dentro del tramo sudamericano del Junkie Tour, tras pasar por México, Puerto Rico, Caracas (Poliedro) y Montevideo (Velódromo Municipal). La cronología está confirmada por la propia lista de gira archivada en alanis.com (noviembre 1999) y por el artículo de Página/12 del 24/11/1999. Alanis venía de su viaje a la India, que inspiró canciones del disco, y poco antes de estos shows había estrenado el videoclip de 'Thank U' con imágenes suyas desnuda — que la prensa porteña asoció al ajuste de perfil de su personaje. El setlist arriba corresponde a la noche del 22/11, documentada por una grabación completa subida por un canal de fans a YouTube (ver fuente 'video') cuya lista de temas coincide, tema por tema y en el mismo orden, con la crónica colaborativa de setlist.fm para esa fecha. La noche del 23/11 — la que retrata la fotografía de archivo personal incluida en esta sección — tuvo un setlist casi idéntico pero de 14 temas según setlist.fm, sin 'Would Not Come' ni 'Sympathetic Character'.",
       "reception": "La crítica de Página/12 (24/11/1999) fue tibia: señaló que la banda 'pretendía rockear, se quedaba a mitad de camino' y que la artista 'apenas si llenó la mitad del estadio de Corrientes y el Bajo en dos shows cortos'. Pese a ello rescató el tramo final del show con 'Uninvited', 'Thank U', 'Mary Jane' e 'Ironic' como lo mejor de la noche. El mismo día ofreció una función privada y acústica en el Hard Rock Café.",
-      "photos": [],
+      "photos": ["luna-park-1999-11-23"],
       "sources": [
         {
           "title": "Página/12 - La chica le cantaba sus secretos al mundo (crónica del show)",
-          "url": "http://pagina12.com.ar/1999/99-11/99-11-24/pag28.htm",
+          "url": "https://www.pagina12.com.ar/1999/99-11/99-11-24/pag28.htm",
           "type": "press"
         },
         {
@@ -1862,9 +1867,24 @@ const argentina = {
           "title": "Junkie Tour - Wikipedia (setlist representativo y fechas sudamericanas)",
           "url": "https://en.wikipedia.org/wiki/Junkie_Tour",
           "type": "setlist"
+        },
+        {
+          "title": "Setlist.fm - Alanis Morissette, Estadio Luna Park, 22 de noviembre de 1999",
+          "url": "https://www.setlist.fm/setlist/alanis-morissette/1999/estadio-luna-park-buenos-aires-argentina-13c32989.html",
+          "type": "setlist"
+        },
+        {
+          "title": "Setlist.fm - Alanis Morissette, Estadio Luna Park, 23 de noviembre de 1999",
+          "url": "https://www.setlist.fm/setlist/alanis-morissette/1999/estadio-luna-park-buenos-aires-argentina-1bc32988.html",
+          "type": "setlist"
+        },
+        {
+          "title": "Alanis Morissette Live Tour - Buenos Aires, Argentina [Full Concert 1999] (grabación completa, canal de fans, noche del 22/11 según su propia descripción)",
+          "url": "https://www.youtube.com/watch?v=rbMvA2Jn5HU",
+          "type": "video"
         }
       ],
-      "contradictions": "CORRECCIÓN IMPORTANTE: el punto de partida del usuario mencionaba 'una muy famosa fecha de 1999 en un estadio de Buenos Aires (creo abril de 1999 en Estadio Vélez Sarsfield o similar)'. Eso es incorrecto. Las fuentes (archivo de giras de alanis.com, Wikipedia Junkie Tour y la crónica de Página/12 del 24/11/1999) coinciden en dos noches en el Luna Park los días 22 y 23 de noviembre de 1999. No hay evidencia de un show en Vélez Sarsfield ni en abril de 1999. El setlist listado es el 'representativo' del Junkie Tour (Wikipedia) mezclado con los temas confirmados por la crónica de Página/12 (Baba, Hand in My Pocket, You Oughta Know, Uninvited, Thank U, Mary Jane, Ironic); el setlist completo exacto de cada noche no pudo verificarse de forma independiente, por eso se marca como no verificado."
+      "contradictions": "CORRECCIÓN IMPORTANTE: el punto de partida del usuario mencionaba 'una muy famosa fecha de 1999 en un estadio de Buenos Aires (creo abril de 1999 en Estadio Vélez Sarsfield o similar)'. Eso es incorrecto. Las fuentes (archivo de giras de alanis.com, Wikipedia Junkie Tour y la crónica de Página/12 del 24/11/1999) coinciden en dos noches en el Luna Park los días 22 y 23 de noviembre de 1999. No hay evidencia de un show en Vélez Sarsfield ni en abril de 1999. El setlist de arriba (22/11) se apoya en dos fuentes independientes que coinciden entre sí (la descripción del video de YouTube y setlist.fm), aunque ambas son de origen colaborativo/no oficial (setlist.fm cita solo '2 personas' presentes esa noche), por lo que se marca como verificado con esa salvedad. La foto de archivo personal es del 23/11 según su nombre de archivo; no se encontró ninguna crónica de prensa que distinga esa segunda noche de la primera."
     },
     {
       "year": 2009,
@@ -2031,7 +2051,7 @@ const argentina = {
     },
     {
       "title": "Página/12 - La chica le cantaba sus secretos al mundo (crónica 24/11/1999)",
-      "url": "http://pagina12.com.ar/1999/99-11/99-11-24/pag28.htm",
+      "url": "https://www.pagina12.com.ar/1999/99-11/99-11-24/pag28.htm",
       "type": "press"
     },
     {
@@ -2102,12 +2122,12 @@ const argentina = {
   ]
 };
 
-const media = [
+export const media = [
   {
     "id": "alanis-2013-saban-theatre",
-    "title": "Alanis Morissette performing live at the Saban Theatre, Beverly Hills (20 Oct 2013)",
+    "title": "Alanis Morissette actuando en vivo en el Saban Theatre, Beverly Hills (20 de octubre de 2013)",
     "category": "live",
-    "description": "Alanis Morissette singing on stage as special musical guest at Marianne Williamson's event announcing her run for Congress.",
+    "description": "Alanis Morissette cantando en el escenario como invitada musical especial en el evento de Marianne Williamson en el que anunció su candidatura al Congreso.",
     "src": "images/live/alanis-2013-saban-theatre.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alanis_Morissette_10_20_2013_-4_(10395333704)_(cropped).jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Alanis_Morissette_10_20_2013_-4_%2810395333704%29_%28cropped%29.jpg",
@@ -2120,9 +2140,9 @@ const media = [
   },
   {
     "id": "alanis-2013-saban-theatre-wide",
-    "title": "Alanis Morissette live at the Saban Theatre, Beverly Hills (2013, wide)",
+    "title": "Alanis Morissette en vivo en el Saban Theatre, Beverly Hills (2013, plano abierto)",
     "category": "live",
-    "description": "Wide stage shot of Alanis Morissette performing at the Saban Theatre during her 2013 appearance.",
+    "description": "Toma abierta del escenario con Alanis Morissette actuando en el Saban Theatre durante su presentación de 2013.",
     "src": "images/live/alanis-2013-saban-theatre-wide.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alanis_Morissette_10_20_2013_-15_(10395201525).jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Alanis_Morissette_10_20_2013_-15_%2810395201525%29.jpg",
@@ -2135,9 +2155,9 @@ const media = [
   },
   {
     "id": "alanis-2013-saban-theatre-2",
-    "title": "Alanis Morissette live at the Saban Theatre, Beverly Hills (2013, alternative shot)",
+    "title": "Alanis Morissette en vivo en el Saban Theatre, Beverly Hills (2013, otro ángulo)",
     "category": "live",
-    "description": "Another angle of Alanis Morissette performing live at the Saban Theatre.",
+    "description": "Otro ángulo de Alanis Morissette actuando en vivo en el Saban Theatre.",
     "src": "images/live/alanis-2013-saban-theatre-2.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alanis_Morissette_10_20_2013_-2_(10395363815).jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Alanis_Morissette_10_20_2013_-2_%2810395363815%29.jpg",
@@ -2150,9 +2170,9 @@ const media = [
   },
   {
     "id": "alanis-2014-saban-rally",
-    "title": "Alanis Morissette at Marianne Williamson's pre-election rally, Saban Theatre (19 May 2014)",
+    "title": "Alanis Morissette en el acto preelectoral de Marianne Williamson, Saban Theatre (19 de mayo de 2014)",
     "category": "live",
-    "description": "Alanis Morissette performing live at the Saban Theater during the 2014 pre-election rally.",
+    "description": "Alanis Morissette actuando en vivo en el Saban Theatre durante el acto preelectoral de 2014.",
     "src": "images/live/alanis-2014-saban-rally.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alanis_Morissette_5-19-2014_-12_(14041927017).jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Alanis_Morissette_5-19-2014_-12_%2814041927017%29.jpg",
@@ -2165,9 +2185,9 @@ const media = [
   },
   {
     "id": "alanis-2014-saban-rally-2",
-    "title": "Alanis Morissette at Marianne Williamson's pre-election rally (2014, alternative shot)",
+    "title": "Alanis Morissette en el acto preelectoral de Marianne Williamson (2014, otro ángulo)",
     "category": "live",
-    "description": "Additional shot of Alanis Morissette performing at the 2014 Saban Theater rally.",
+    "description": "Otra toma de Alanis Morissette actuando en el acto de 2014 en el Saban Theatre.",
     "src": "images/live/alanis-2014-saban-rally-2.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alanis_Morissette_5-19-2014_-10_(14226180722).jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Alanis_Morissette_5-19-2014_-10_%2814226180722%29.jpg",
@@ -2180,9 +2200,9 @@ const media = [
   },
   {
     "id": "alanis-2022-live-raph",
-    "title": "Alanis Morissette performing live (2022)",
+    "title": "Alanis Morissette actuando en vivo (2022)",
     "category": "live",
-    "description": "High-resolution concert performance photograph of Alanis Morissette captured during her 2022 tour.",
+    "description": "Fotografía en alta resolución de Alanis Morissette en concierto, tomada durante su gira de 2022.",
     "src": "images/live/alanis-2022-live-raph.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:AlanisO2280622_(10_of_24)_(52185780593).jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/AlanisO2280622_%2810_of_24%29_%2852185780593%29.jpg",
@@ -2195,9 +2215,9 @@ const media = [
   },
   {
     "id": "alanis-2022-live-raph-2",
-    "title": "Alanis Morissette performing live (2022, alternative shot)",
+    "title": "Alanis Morissette actuando en vivo (2022, otro ángulo)",
     "category": "live",
-    "description": "Additional 2022 concert performance photograph of Alanis Morissette.",
+    "description": "Otra fotografía de concierto de Alanis Morissette tomada en 2022.",
     "src": "images/live/alanis-2022-live-raph-2.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:AlanisO2280622_(2_of_24)_(52185770396).jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/AlanisO2280622_%282_of_24%29_%2852185770396%29.jpg",
@@ -2210,9 +2230,9 @@ const media = [
   },
   {
     "id": "alanis-2004-locarno",
-    "title": "Alanis Morissette live at the Moon & Stars Festival, Locarno (2004)",
+    "title": "Alanis Morissette en vivo en el Moon & Stars Festival, Locarno (2004)",
     "category": "live",
-    "description": "Alanis Morissette performing live at the Moon & Stars Festival in Locarno, Switzerland in 2004.",
+    "description": "Alanis Morissette actuando en vivo en el Moon & Stars Festival de Locarno, Suiza, en 2004.",
     "src": "images/live/alanis-2004-locarno.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alanis_morissette_tessin.jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Alanis_morissette_tessin.jpg",
@@ -2225,9 +2245,9 @@ const media = [
   },
   {
     "id": "alanis-2005-roseland-ballroom",
-    "title": "Alanis Morissette at Roseland Ballroom, New York (2005)",
+    "title": "Alanis Morissette en el Roseland Ballroom, Nueva York (2005)",
     "category": "live",
-    "description": "Alanis Morissette concert at the Roseland Ballroom in New York City, November 2005.",
+    "description": "Concierto de Alanis Morissette en el Roseland Ballroom de Nueva York, noviembre de 2005.",
     "src": "images/live/alanis-2005-roseland-ballroom.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alanis_Morissette_-_Roseland_Ballroom.jpeg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Alanis_Morissette_-_Roseland_Ballroom.jpeg",
@@ -2240,9 +2260,9 @@ const media = [
   },
   {
     "id": "alanis-2008-koeln",
-    "title": "Alanis Morissette live in Cologne (2008)",
+    "title": "Alanis Morissette en vivo en Colonia (2008)",
     "category": "live",
-    "description": "Alanis Morissette performing live in Cologne (Koln), Germany in 2008.",
+    "description": "Alanis Morissette actuando en vivo en Colonia (Koln), Alemania, en 2008.",
     "src": "images/live/alanis-2008-koeln.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alanis.JPG",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Alanis.JPG",
@@ -2255,9 +2275,9 @@ const media = [
   },
   {
     "id": "alanis-2003-brasilia",
-    "title": "Alanis Morissette at the Brasilia Music Festival (2003)",
+    "title": "Alanis Morissette en el Brasilia Music Festival (2003)",
     "category": "live",
-    "description": "Alanis Morissette during her performance at the Brasilia Music Festival in Brazil, 2003.",
+    "description": "Alanis Morissette durante su actuación en el Brasilia Music Festival, en Brasil, en 2003.",
     "src": "images/live/alanis-2003-brasilia.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:AlanisMorissette.01.jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/AlanisMorissette.01.jpg",
@@ -2270,9 +2290,9 @@ const media = [
   },
   {
     "id": "alanis-walk-of-fame-star",
-    "title": "Alanis Morissette's star on Canada's Walk of Fame",
+    "title": "Estrella de Alanis Morissette en el Paseo de la Fama de Canadá",
     "category": "career",
-    "description": "A star honouring Alanis Morissette on Canada's Walk of Fame (Toronto).",
+    "description": "Una estrella que homenajea a Alanis Morissette en el Paseo de la Fama de Canadá (Toronto).",
     "src": "images/career/alanis-walk-of-fame-star.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alanis_Morissette_Star_on_Walk_of_Fame_adjusted.jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Alanis_Morissette_Star_on_Walk_of_Fame_adjusted.jpg",
@@ -2285,24 +2305,24 @@ const media = [
   },
   {
     "id": "alanis-rock-walk-of-fame",
-    "title": "Alanis Morissette's Hollywood Rock Walk of Fame star",
+    "title": "Estrella de Alanis Morissette en el Hollywood Rock Walk of Fame",
     "category": "career",
-    "description": "Alanis Morissette's star at Hollywood's Rock Walk of Fame (Guitar Center, Los Angeles).",
+    "description": "La estrella de Alanis Morissette en el Rock Walk of Fame de Hollywood (Guitar Center, Los Ángeles).",
     "src": "images/career/alanis-rock-walk-of-fame.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Hollywood%27s_Rock_Walk_of_Fame_(Alanis_Morissette).jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Hollywood%27s_Rock_Walk_of_Fame_%28Alanis_Morissette%29.jpg",
     "credit": "Alexis Doine",
     "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "resolution": "784x1358 (original)",
     "pageUrl": "https://commons.wikimedia.org/wiki/File:Hollywood%27s_Rock_Walk_of_Fame_(Alanis_Morissette).jpg",
     "referencesOnly": false
   },
   {
     "id": "alanis-signing-autographs",
-    "title": "Alanis Morissette signing autographs for fans",
+    "title": "Alanis Morissette firmando autógrafos a sus fans",
     "category": "career",
-    "description": "Alanis Morissette seen signing autographs for fans (2011).",
+    "description": "Alanis Morissette fotografiada firmando autógrafos a sus fans (2011).",
     "src": "images/career/alanis-signing-autographs.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Alaniss.jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Alaniss.jpg",
@@ -2315,9 +2335,9 @@ const media = [
   },
   {
     "id": "alanis-portrait",
-    "title": "Alanis Morissette portrait (2005)",
+    "title": "Retrato de Alanis Morissette (2005)",
     "category": "career",
-    "description": "Studio-style portrait of Alanis Morissette, originally posted to Flickr in 2005.",
+    "description": "Retrato de estudio de Alanis Morissette, publicado originalmente en Flickr en 2005.",
     "src": "images/career/alanis-portrait.webp",
     "originUrl": "https://commons.wikimedia.org/wiki/File:Morissette.jpg",
     "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Morissette.jpg",
@@ -2330,9 +2350,9 @@ const media = [
   },
   {
     "id": "jagged-little-pill-album-cover",
-    "title": "Jagged Little Pill (1995) - album cover art",
+    "title": "Jagged Little Pill (1995) - portada del álbum",
     "category": "albums",
-    "description": "The iconic cover art for Alanis Morissette's 1995 album 'Jagged Little Pill'. This is copyrighted album artwork and is NOT freely licensed; it cannot be shipped as a permanent site asset.",
+    "description": "La icónica portada del álbum de 1995 de Alanis Morissette, 'Jagged Little Pill'. Es una obra de arte protegida por derechos de autor y NO tiene licencia libre; no puede incluirse como recurso permanente del sitio.",
     "src": "",
     "originUrl": "https://en.wikipedia.org/wiki/File:Alanis_Morissette_-_Jagged_Little_Pill.jpg",
     "fileUrl": "",
@@ -2342,13 +2362,13 @@ const media = [
     "resolution": "unknown",
     "pageUrl": "https://en.wikipedia.org/wiki/File:Alanis_Morissette_-_Jagged_Little_Pill.jpg",
     "referencesOnly": true,
-    "legalAlternative": "Do not download or ship this image. Instead, link out to the cover on a licensed store/streaming page (e.g. Apple Music, Spotify, or alanis.com) so no copyrighted asset is hosted on the site. Referencing the album by title and a text link is fully legal."
+    "legalAlternative": "No descargar ni incluir esta imagen. En su lugar, enlazar a la portada en una tienda o plataforma con licencia (por ejemplo, Apple Music, Spotify o alanis.com) para no alojar ningún recurso protegido en el sitio. Mencionar el álbum por su título y usar un enlace de texto es completamente legal."
   },
   {
     "id": "supposed-former-infatuation-junkie-album-cover",
-    "title": "Supposed Former Infatuation Junkie (1998) - album cover art",
+    "title": "Supposed Former Infatuation Junkie (1998) - portada del álbum",
     "category": "albums",
-    "description": "Cover art for Alanis Morissette's 1998 album, copyrighted and not freely licensed; cannot be shipped as a permanent site asset.",
+    "description": "Portada del álbum de 1998 de Alanis Morissette, protegida por derechos de autor y sin licencia libre; no puede incluirse como recurso permanente del sitio.",
     "src": "",
     "originUrl": "https://en.wikipedia.org/wiki/File:Alanis_Morissette_-_Supposed_Former_Infatuation_Junkie.jpg",
     "fileUrl": "",
@@ -2358,23 +2378,17 @@ const media = [
     "resolution": "unknown",
     "pageUrl": "https://en.wikipedia.org/wiki/File:Alanis_Morissette_-_Supposed_Former_Infatuation_Junkie.jpg",
     "referencesOnly": true,
-    "legalAlternative": "Do not host the cover. Link out to the album page on a licensed platform or to alanis.com, and reference the album by text. The 'albums' media folder is intentionally left empty pending a freely-licensed alternative."
+    "legalAlternative": "No alojar la portada. Enlazar a la página del álbum en una plataforma con licencia o a alanis.com, y mencionar el álbum por texto. La carpeta de medios 'albums' se deja vacía intencionalmente hasta contar con una alternativa de licencia libre."
   },
   {
-    "id": "alanis-argentina-concert",
-    "title": "Alanis Morissette performing in Argentina - no freely-licensed image found",
+    "id": "luna-park-1999-11-23",
+    "title": "Luna Park, 23 de noviembre de 1999",
     "category": "argentina",
-    "description": "No freely-licensed (CC/public-domain) photograph of Alanis Morissette in or related to Argentina could be located on Wikimedia Commons. The 'argentina' media folder is therefore intentionally left empty.",
-    "src": "",
-    "originUrl": "https://commons.wikimedia.org/wiki/Category:Alanis_Morissette",
-    "fileUrl": "",
-    "credit": "n/a",
-    "license": "n/a",
-    "licenseUrl": "",
-    "resolution": "unknown",
-    "pageUrl": "https://commons.wikimedia.org/wiki/Category:Alanis_Morissette",
-    "referencesOnly": true,
-    "legalAlternative": "Use a freely-licensed image of a Buenos Aires venue or concert city (search Wikimedia Commons for 'Estadio Monumental Buenos Aires', 'Luna Park Buenos Aires', or 'Buenos Aires') to illustrate 'Argentina', or license a credited press photo directly from an agency/Sociedad Argentina de Autores y Compositores de Musica events archive. Alternatively, link to a fan-filmed performance via a licensed video platform."
+    "description": "Alanis Morissette en el estadio Luna Park, Buenos Aires, durante el Junkie Tour (23 de noviembre de 1999).",
+    "src": "images/live/Luna-23-99.jpg",
+    "credit": "Archivo personal",
+    "license": "Uso personal",
+    "resolution": "650x1000",
+    "referencesOnly": false
   }
 ];
-

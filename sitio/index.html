@@ -9,6 +9,31 @@
       content="Un documental interactivo sobre Alanis Morissette: su trayectoria, discografía, conciertos, premios y su vínculo especial con Argentina."
     />
 
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:title" content="Alanis Morissette — Una experiencia documental digital" />
+    <meta
+      property="og:description"
+      content="Un documental interactivo sobre Alanis Morissette: su trayectoria, discografía, conciertos, premios y su vínculo especial con Argentina."
+    />
+    <!-- TODO: reemplazar por la URL absoluta con el dominio real de producción -->
+    <meta property="og:image" content="images/career/alanis-portrait.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Alanis Morissette — Una experiencia documental digital" />
+    <meta
+      name="twitter:description"
+      content="Un documental interactivo sobre Alanis Morissette: su trayectoria, discografía, conciertos, premios y su vínculo especial con Argentina."
+    />
+    <!-- TODO: reemplazar por la URL absoluta con el dominio real de producción -->
+    <meta name="twitter:image" content="images/career/alanis-portrait.webp" />
+
+    <!-- TODO: reemplazar por el dominio real de producción -->
+    <link rel="canonical" href="/" />
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
     <!-- Tipografías de Google (si no hay internet, se usan las de sistema) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,6 +46,8 @@
   </head>
 
   <body>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+
     <!-- ================= NAVEGACIÓN ================= -->
     <header class="nav" id="nav">
       <nav class="nav-inner">
@@ -39,7 +66,7 @@
           <li><a href="#fuentes">Fuentes</a></li>
         </ul>
 
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
           <span class="sr-only">Menú</span>
         </button>
       </nav>
@@ -47,7 +74,7 @@
     </header>
 
     <!-- Menú móvil -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" aria-label="Navegación móvil" hidden>
       <a href="#historia">Historia</a>
       <a href="#discografia">Discografía</a>
       <a href="#jlp">Jagged Little Pill</a>
@@ -57,6 +84,7 @@
       <a href="#fuentes">Fuentes</a>
     </div>
 
+    <main id="main">
     <!-- ================= HERO ================= -->
     <section class="hero" id="inicio">
       <div class="hero-bg" id="heroBg">
@@ -67,6 +95,16 @@
         />
       </div>
       <div class="hero-overlay"></div>
+      <div class="hero-neon"></div>
+      <div class="hero-topscrim"></div>
+
+      <a href="#argentina" class="hero-banner" id="heroBanner">
+        Su paso por el Luna Park, 1999
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
 
       <div class="container hero-content">
         <p class="overline anim">Una experiencia documental interactiva</p>
@@ -129,7 +167,7 @@
 
       <!-- Cinta de canciones en movimiento -->
       <div class="marquee" style="margin-block: 2.5rem">
-        <div class="marquee-track" id="marquee"></div>
+        <div class="marquee-track" id="marquee" aria-hidden="true"></div>
       </div>
 
       <div class="container">
@@ -152,7 +190,7 @@
       </div>
 
       <!-- Imagen destacada a pantalla ancha -->
-      <div class="feature" style="margin-top: 3.5rem">
+      <div class="feature" id="featureSection" style="margin-top: 3.5rem">
         <img id="featureImg" src="images/live/alanis-2014-saban-rally.webp" alt="Alanis en vivo" />
         <div class="ovl"></div>
         <div class="cap">
@@ -172,7 +210,7 @@
       <div class="container">
         <p class="overline" style="color: var(--ember)">Especial</p>
         <h2 class="arg-title" style="margin-top: 1rem">
-          Alanis in
+          Alanis en
           <br />
           <span>Argentina</span>
         </h2>
@@ -189,7 +227,7 @@
               />
               <circle cx="56" cy="60" r="5" fill="var(--ember)" />
               <circle cx="56" cy="60" r="5" fill="none" stroke="var(--ember)" stroke-width="0.6" class="map-ring" />
-              <text x="63" y="63" style="font-size: 6px; letter-spacing: 0.2em; fill: var(--paper)">Buenos Aires</text>
+              <text x="61" y="63" style="font-size: 4.5px; letter-spacing: 0.06em; fill: var(--paper)">Buenos Aires</text>
               <text x="24" y="96" style="font-size: 5px; letter-spacing: 0.2em; fill: rgba(216,210,196,0.5)">ESQUEMÁTICO</text>
             </svg>
           </div>
@@ -215,16 +253,11 @@
         <p class="overline" style="color: var(--blood)">Archivo visual</p>
         <h2 class="section-title" style="margin-top: 1rem">La fotografía como archivo</h2>
 
-        <div class="filters" id="filters">
-          <button class="active" data-cat="Todos">Todos</button>
-          <button data-cat="Portraits">Portraits</button>
-          <button data-cat="Live">Live</button>
-          <button data-cat="Tours">Tours</button>
-          <button data-cat="Awards">Awards</button>
-          <button data-cat="Studio">Studio</button>
-          <button data-cat="Argentina">Argentina</button>
-        </div>
+        <!-- Los botones de categoría se arman por JS: solo se muestran las
+             categorías que efectivamente tienen imágenes disponibles. -->
+        <div class="filters" id="filters"></div>
 
+        <p class="sr-only" id="archiveStatus" aria-live="polite"></p>
         <div class="archive-grid" id="archiveGrid"></div>
       </div>
     </section>
@@ -253,9 +286,8 @@
         </footer>
       </div>
     </section>
+    </main>
 
-    <!-- Los datos (const globales) primero, luego la lógica -->
-    <script src="js/datos.js"></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

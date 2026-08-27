@@ -1,2 +1,8 @@
-# Sitio estático — nada que ignorar por ahora.
-# Si después agregás dependencias, usá una carpeta /vendor o similar.
+# Sitio estático — nada crítico por ahora, pero prevenimos lo típico.
+.vercel/
+.env
+.env.*
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
